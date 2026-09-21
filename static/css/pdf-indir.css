@@ -1,0 +1,96 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #222;
+}
+header {
+  background: #0077cc;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+main {
+  padding: 3rem; /* Artırılmış boşluk */
+}
+.siniflar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Öğeler arasındaki boşluk */
+}
+.siniflar li {
+  background: #fff;
+  border: 2px solid #0077cc;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.siniflar li:hover {
+  background: #0077cc;
+  color: white;
+}
+.icerik {
+  margin-top: 2rem;
+  display: none;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.icerik ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+  font-size: 0.9rem;
+}
+.icerik {
+  display: none; /* Başlangıçta gizli */
+  margin-top: 2rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.uniteler {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.uniteler li {
+  flex: 1 1 200px;   /* Minimum 200px genişlik, esnek kutular */
+  background: #f0f0f0;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+}
+.uniteler li:hover {
+  background: #0077cc;
+  color: white;
+}
+/* Konular kutusu */
+.konular {
+  display: none;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+}
+.konular a {
+  text-decoration: none;
+  color: #0077cc;
+}
+.konular a:hover {
+  text-decoration: underline;
+}

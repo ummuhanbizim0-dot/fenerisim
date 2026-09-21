@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Güneş Sistemi ve Tutulmalar – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/6sinifkonu.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Güneş Sistemi ve Tutulmalar – İşaret Dili Video Kütüphanesi</h1>
+      <p>6. Sınıf Fen Bilimleri | Güneş, Dünya ve Ay ilişkisi, tutulmalar ve gözlem becerileri işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Güneş Sistemi</a>
+        <a href="#" class="chip">Dünya Hareketleri</a>
+        <a href="#" class="chip">Ay Evreleri</a>
+        <a href="#" class="chip">Güneş Tutulması</a>
+        <a href="#" class="chip">Ay Tutulması</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Güneş Sistemi</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Güneş Sistemi’nin Yapısı ve Gezegenler</h3>
+          <p class="card-meta">İşaret diliyle sistem tanıtımı • 5 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1505575972945-338c3fdde642?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Dünya Hareketleri</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Dünya’nın Dönme ve Dolanma Hareketi</h3>
+          <p class="card-meta">İşaret diliyle hareket etkileri • 6 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1588776814546-ec7b5f1e1e2c?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Ay Evreleri</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Ay’ın Yapısı ve Evreleri</h3>
+          <p class="card-meta">İşaret diliyle ay gözlemi • 7 dk</p>
+          <a class="btn" href="#video-3">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Güneş Tutulması</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Güneş Tutulması Nasıl Oluşur?</h3>
+          <p class="card-meta">İşaret diliyle modelleme • 6 dk</p>
+          <a class="btn" href="#video-4">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Ay Tutulması</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Ay Tutulması Nasıl Oluşur?</h3>
+          <p class="card-meta">İşaret diliyle gölge ve ışık • 6 dk</p>
+          <a class="btn" href="#video-5">Videoyu Aç</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolara altyazı ve kısa özet eklenmiştir. Tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+
+<div id="video-1" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Güneş Sistemi'nin Yapısı</h2>
+   
+      <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/0000000000000') }}" type="video/mp4">
+      </video>
+    </div>
+   
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-1')" class="pill transcript-btn">Altyazı İçin Tıklayın</button>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Güneş, gezegenler ve diğer gök cisimlerinin konumu ve özellikleri anlatılır.</p>
+
+    <div id="transcript-1" style="display: none;">
+      <h3>🎬 Güneş Sistemi'nin Yapısı – İşaret Dili Transkripti</h3>
+      <p>
+        GÜNEŞ → MERKEZ<br>
+        GEZEGEN → 8 TANE<br>
+        GEZEGEN → GÜNEŞ ETRAFINDA DÖNER<br>
+        İÇ GEZEGENLER → KAYAÇ<br>
+        DIŞ GEZEGENLER → GAZ
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="video-2" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Dünya'nın Dönme ve Dolanma Hareketi</h2>
+   
+      <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/0000000000000') }}" type="video/mp4">
+      </video>
+    </div>
+   
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-2')" class="pill transcript-btn">Altyazı İçin Tıklayın</button>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Dünya'nın hareketlerinin gece-gündüz ve mevsim oluşumuna etkisi anlatılır.</p>
+
+    <div id="transcript-2" style="display: none;">
+      <h3>🎬 Dünya'nın Dönme ve Dolanma Hareketi – İşaret Dili Transkripti</h3>
+      <p>
+        DÜNYA → KENDİ EKSENİ → DÖNME → 24 SAAT<br>
+        DÜNYA → GÜNEŞ ETRAFI → DOLANMA → 365 GÜN<br>
+        DÖNME → GECE-GÜNDÜZ<br>
+        DOLANMA → MEVSİM
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="video-3" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Ay'ın Yapısı ve Evreleri</h2>
+     
+      <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/0000000000000') }}" type="video/mp4">
+      </video>
+    </div>
+   
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-3')" class="pill transcript-btn">Altyazı İçin Tıklayın</button>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Ay'ın evreleri, gözlem yöntemleri ve Dünya ile ilişkisi işaret diliyle sunulur.</p>
+
+    <div id="transcript-3" style="display: none;">
+      <h3>🎬 Ay'ın Yapısı ve Evreleri – İşaret Dili Transkripti</h3>
+      <p>
+        AY → DÜNYA'NIN UYDUSU<br>
+        AY → IŞIK ÜRETMEZ<br>
+        AY → GÜNEŞ IŞIĞINI YANSITIR<br>
+        AY → EVRE DEĞİŞİR<br>
+        YENİAY → HİLAL → DOLUNAY
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="video-4" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Güneş Tutulması Nasıl Oluşur?</h2>
+    
+      <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/0000000000000') }}" type="video/mp4">
+      </video>
+    </div>
+   
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-4')" class="pill transcript-btn">Altyazı İçin Tıklayın</button>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Güneş tutulmasının oluşumu, Ay'ın Dünya ile Güneş arasına girmesiyle gerçekleşen gölge olayları işaret diliyle anlatılır.</p>
+
+    <div id="transcript-4" style="display: none;">
+      <h3>🎬 Güneş Tutulması – İşaret Dili Transkripti</h3>
+      <p>
+        AY → GÜNEŞ İLE DÜNYA ARASINA GİRER<br>
+        AY GÖLGESİ → DÜNYAYA DÜŞER<br>
+        GÜNDÜZ → KARANLIK OLUR<br>
+        NADİR GÖRÜLÜR
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="video-5" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Ay Tutulması Nasıl Oluşur?</h2>
+    
+      <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/0000000000000') }}" type="video/mp4">
+      </video>
+    </div>
+   
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-5')" class="pill transcript-btn">Altyazı İçin Tıklayın</button>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Ay tutulmasının oluşumu, Dünya'nın gölge konumu ve gözlem süreci işaret diliyle anlatılır.</p>
+
+    <div id="transcript-5" style="display: none;">
+      <h3>🎬 Ay Tutulması – İşaret Dili Transkripti</h3>
+      <p>
+        DÜNYA → GÜNEŞ İLE AY ARASINA GİRER<br>
+        DÜNYA GÖLGESİ → AYA DÜŞER<br>
+        AY → KARARIR / KIZARIR<br>
+        GECE GÖRÜLÜR
+      </p>
+    </div>
+  </div>
+</div>
+<script>
+  function toggleTranscript(id) {
+    const box = document.getElementById(id);
+    const isHidden = box.style.display === "none";
+
+    box.style.display = isHidden ? "block" : "none";
+
+    if (isHidden) {
+      setTimeout(() => {
+        box.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }
+</script>
+</body>
+</html>

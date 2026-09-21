@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dünyamızı Keşfedelim – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/4sinifkonu.css') }}">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Dünyamızı Keşfedelim – İşaret Dili Video Kütüphanesi</h1>
+      <p>4. Sınıf Fen Bilimleri | Dünya’nın şekli, yapısı ve hareketleri işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Dünya’nın Şekli</a>
+        <a href="#" class="chip">Dünya’nın Yapısı</a>
+        <a href="#" class="chip">Dünya’nın Hareketleri</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb"><span class="badge">Dünya’nın Şekli</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Dünya’nın Şekli Nasıl Tahmin Edilir?</h3>
+          <p class="card-meta">İşaret diliyle gözlem • 5 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+          <p class="experiment">🧪 Etkinlik: Geometrik cisimlerle Dünya’nın şekli benzetimi</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Dünya’nın Yapısı</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Dünya’nın Katmanları</h3>
+          <p class="card-meta">İşaret diliyle modelleme • 6 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+          <p class="experiment">🧪 Uygulama: Kil ve oyun hamuruyla Dünya modeli oluşturma</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Dünya’nın Hareketleri</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Dönme ve Dolanma Hareketi</h3>
+          <p class="card-meta">İşaret diliyle gözlem ve çıkarım • 5 dk</p>
+          <a class="btn" href="#video-3">Videoyu Aç</a>
+          <p class="experiment">🧪 Etkinlik: Gölge değişimi ve mevsim oluşumu gözlemi</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal örnekleri -->
+  <div id="video-1" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Dünya’nın Şekli Nasıl Tahmin Edilir?</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Dünya’nın şekliyle ilgili gözleme dayalı tahminler geometrik cisimlerle ilişkilendirilerek anlatılır.</p>
+    </div>
+  </div>
+
+  <div id="video-2" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Dünya’nın Katmanları</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Dünya’nın yapısı hava küre, su küre, taş küre ve canlı küre olarak modellenir.</p>
+    </div>
+  </div>
+
+  <div id="video-3" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Dönme ve Dolanma Hareketi</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Dünya’nın dönme ve dolanma hareketlerinin gün, gece ve mevsim oluşumuna etkisi anlatılır.</p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolarda arya ve kısa özet eklenmiştir, tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

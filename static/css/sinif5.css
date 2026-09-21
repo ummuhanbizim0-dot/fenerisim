@@ -1,0 +1,217 @@
+/* === GENEL AYARLAR === */
+body {
+  background: linear-gradient(to bottom right,#2e9b1b, #e3820b,#ffb0ca); /* Pastel mavi → pembe → lila */
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sayfa kutusu */
+.grade-page {
+  background: rgba(216, 215, 226, 0.91);
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 1200px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(214, 236, 252, 0.17);
+}
+
+/* === BAŞLIK === */
+.grade-header {
+  background: linear-gradient(to bottom right, #6190ff,#2aa116, #f06292, #ce93d8);
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 16px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(32, 57, 57, 0.2);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+.grade-header h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.grade-header p {
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+/* === KONULAR === */
+.topics h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #2f1414;
+}
+
+.topic-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.topic-card {
+  background: #FFE0E0;
+  padding: 20px 25px;
+  border-radius: 12px;
+  color: #4A148C;
+  width: 280px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.topic-card a {
+  color: #2f1414;
+  font-weight: bold;
+  font-size: 19px;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.topic-card .meta {
+  font-size: 13px;
+  color: #571313;
+  opacity: 0.85;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.video-link {
+  font-size: 12px;
+  color: #010863;
+  text-decoration: underline;
+  display: block;
+}
+
+.topic-card:hover { /* Hover efekti */
+  background-color: #fff;
+  color: #2d0046;
+  transform: translateY(-5px);
+}
+
+.topic-card:hover a {
+  color: #29003f;
+}
+
+.topic-card:hover .meta {
+  color: #444;
+}
+
+.topic-card:hover .video-link {
+  color: #2d0046;
+}
+
+/* === VİDEOLAR === */
+.videos h3 {
+  font-size: 24px;
+  margin: 40px 0 20px;
+  text-align: center;
+  color: #2f1414;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.video-card {
+  background: #FFE0E0;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.video-card iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  border: none;
+}
+
+.video-card p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #2f1414;
+  font-weight: 500;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  background-color: #fff;
+}
+
+.video-card:hover p {
+  color: #6a00a3;
+}
+
+/* === KAYNAKLAR === */
+.resources h3 {
+  font-size: 24px;
+  margin: 40px 0 15px;
+  text-align: center;
+  color: #571313;
+}
+
+.resources ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.resources li a {
+  background: #FFE0E0;
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: #571313;
+  text-decoration: none;
+  font-weight: 500;
+  
+}
+
+.resources li a:hover {
+  background-color: #fff;
+  color: #6a00a3;
+   transform: translateY(-50px);
+  
+}
+
+/* === DENEYLER === */
+.experiments h3 {
+  font-size: 24px;
+  margin: 40px 0 15px;
+  text-align: center;
+  color: #571313;
+}
+
+.experiment-card {
+  background: #FFE0E0;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  color: #571313;
+}
+
+.experiment-card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.experiment-card a {
+  color: #0b2d83;
+  text-decoration: underline;
+}

@@ -1,0 +1,279 @@
+/* Genel ayarlar */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+}
+
+/* Navbar */
+nav {
+  width: 100%; /* Tam genişlik */
+  height: 115px; /* Sabit yükseklik */
+  background-color: rgb(115, 4, 179); /* Mor ton */
+  backdrop-filter: blur(8px); /* Arkayı bulanıklaştır */
+  display: flex; /* Flex düzen */
+  justify-content: space-between; /* Logo sola, menü sağa */
+  align-items: center; /* Dikey ortalama */
+  padding: 0 30px; /* Yatay iç boşluk */
+  box-sizing: border-box; /* Padding genişliğe dahil */
+  position: fixed; /* Ekrana sabitlenir */
+  top: 0; /* En üstte */
+  left: 0;  /* Solda */
+  z-index: 1000; /* Üstte kalır */    
+}
+/*nav:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}*/
+
+nav h1 {
+  font-size: 35px; /* Logo yazı boyutu */
+  font-weight: bold; /* Kalın yazı */
+  /*color: #fff; /* Beyaz renk */
+  
+}
+
+nav ul {
+  list-style: none; /* Liste işaretlerini kaldır */
+  display: flex; /* Yatay menü */
+  gap: 7px; /* Menü elemanları arası boşluk */
+}
+
+nav ul li a {
+  color: #fff; /* Menü yazı rengi */
+  text-decoration: none; /* Alt çizgi yok */
+  font-weight: 500; /* Orta kalınlık */
+  font-size: 17px; /* Yazı boyutu */
+  transition: color 0.3s ease; /* Renk geçişi yumuşak */
+
+  /*transform: translateY(-5px);*/
+ /* transition: transform 0.3s ease;*/
+  transform: translateY(-4px) scale(1.07); /* Hafifçe yukarı ve büyüsün */
+  transition: color 0.3s, transform 0.3s;
+}
+
+
+nav ul li a:hover {
+  color: #ffe066; /* Sarımsı açık renk, mor arka planda rahatça görünür */
+  transform: translateY(-4px) scale(1.07); /* Hafifçe yukarı ve büyüsün */
+  transition: color 0.3s, transform 0.3s;
+}
+
+/* Hamburger ikon (başta gizli) */
+.menu-toggle {
+  display: none; /* Masaüstünde görünmez */
+  font-size: 28px; /* İkon boyutu */
+  cursor: pointer; /* Üzerine gelince el işareti */
+   color: #fff; /* Beyaz renk */
+}
+
+/* Mobil görünüm ayarları */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Küçük ekranda göster */
+  }
+
+  nav ul {
+    display: none; /* Menü başta gizli */
+    flex-direction: column; /* Alt alta diz */
+    gap: 15px; /* Elemanlar arası boşluk */
+    align-items: center; /* Ortala */
+    padding: 10px 0; /* İç boşluk */
+    background-color: rgb(115, 4, 179); /* Mor ton */
+    position: absolute; /* Navbar'ın altında konumlanır */
+    top: 80px; /* Navbar yüksekliği kadar aşağı */
+    left: 0;
+    width: 100%; /* Tam genişlik */
+  }
+
+  nav ul.active {
+    display: flex; /* JS ile açıldığında görünür */
+  }
+}
+
+.logo {
+  margin-top: 0px; /* Alt boşluk */
+  margin-bottom: 0px; /* Üst boşluk */
+  width: 125px;       /* Genişlik */
+  height: 111px;      /* Yükseklik */
+  border-radius: 27%; /* Tam yuvarlak yapar */
+  object-fit:cover;  /* Görseli kırpmadan ortalar */
+  /*border: 3px solid #fff; /* Beyaz çerçeve (isteğe bağlı) */
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.logo-text {
+  font-size: 40px;
+  color: #fff;
+  font-weight: bold;
+  white-space: nowrap;        /* Tek satırda kalsın */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    height: auto;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(90, 0, 140);
+    padding: 10px 0;
+    position: static; /* Absolute değil! */
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+.nav-links {
+  display: none; /* Başta gizli */
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: rgb(90, 0, 140);
+  padding: 15px 0;
+  z-index: 10;
+}
+
+.nav-links.active {
+  display: flex; /* JS ile açıldığında görünür */
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 0;
+}
+
+/* Oyun kapsayıcı */
+.game-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.game-container h1 {
+  color: #00796b;
+  margin-bottom: 1rem;
+}
+
+.game-container iframe {
+  width: 100%;
+  height: 600px;
+  border: 3px solid #00796b;
+  border-radius: 8px;
+}
+
+/* Giriş/Kayıt kapsayıcı */
+.auth-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Sekme butonları */
+.tab-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 0.5rem;
+  cursor: pointer;
+  background: #eee;
+  border: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.tab-btn.active {
+  background: #ddd;
+}
+
+/* Sekme içerikleri */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Form elemanları */
+form label {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #004d40;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yaşamı Kolaylaştıran Kuvvet – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/8sinifkonu.css') }}">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Yaşamı Kolaylaştıran Kuvvet – İşaret Dili Video Kütüphanesi</h1>
+      <p>8. Sınıf Fen Bilimleri | Basit makineler, kuvvet-yol ilişkisi ve iş kolaylığı işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Basit Makineler</a>
+        <a href="#" class="chip">İş Kolaylığı</a>
+        <a href="#" class="chip">Kuvvetten Kazanç ve Kayıp</a>
+        <a href="#" class="chip">Yoldan Kazanç ve Kayıp</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb"><span class="badge">Basit Makineler</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Basit Makine Türleri</h3>
+          <p class="card-meta">İşaret diliyle kaldıraç, makara, eğik düzlem • 6 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+          <p class="experiment">🧪 Etkinlik: Günlük yaşamda basit makine örnekleri</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">İş Kolaylığı</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Basit Makinelerle İş Kolaylığı</h3>
+          <p class="card-meta">İşaret diliyle kuvvet yönü ve uygulama • 5 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Sabit makara ile yük kaldırma kolaylığı</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Kuvvetten Kazanç ve Kayıp</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Kuvvetin Büyüklüğü ve Kazanç</h3>
+          <p class="card-meta">İşaret diliyle kuvvet oranları • 6 dk</p>
+          <a class="btn" href="#video-3">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Hareketli makara ile kuvvetten kazanç gözlemi</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Yoldan Kazanç ve Kayıp</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Yol Uzunluğu ve Hareket Mesafesi</h3>
+          <p class="card-meta">İşaret diliyle yol-kazanç ilişkisi • 5 dk</p>
+          <a class="btn" href="#video-4">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Eğik düzlemde yükü daha uzun yoldan kaldırma</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal örnekleri -->
+  <div id="video-1" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Basit Makine Türleri</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Kaldıraç, makara, eğik düzlem gibi basit makinelerin türleri ve kullanım alanları anlatılır.</p>
+    </div>
+  </div>
+
+  <!-- Diğer modallar benzer şekilde eklenebilir -->
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolarda arya ve kısa özet eklenmiştir, tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

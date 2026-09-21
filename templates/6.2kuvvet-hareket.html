@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kuvvetin Etkisinde Hareket – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/5sinifkonu.css') }}">
+</head>
+<body>
+    
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Kuvvetin Etkisinde Hareket – İşaret Dili Video Kütüphanesi</h1>
+      <p>6. Sınıf Fen Bilimleri | Bileşke kuvvet, dengelenmiş kuvvetler ve sürat-hız ilişkisi işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Bileşke Kuvvet</a>
+        <a href="#" class="chip">Dengelenmiş ve Dengelenmemiş Kuvvetler</a>
+        <a href="#" class="chip">Sürat ve Hız İlişkisi</a>
+        <a href="#" class="chip">Bileşke Kuvvetin Hesaplanması</a>
+        <a href="#" class="chip">Kuvvetin Hareket Üzerindeki Etkisi</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+  <main class="container">
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb"><span class="badge">Bileşke Kuvvet</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Bileşke Kuvvetin Hesaplanması</h3>
+          <p class="card-meta">İşaret diliyle kuvvet yönü • 6 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Aynı doğrultudaki kuvvetlerin bileşkesini hesaplama</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Dengelenmiş ve Dengelenmemiş Kuvvetler</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Kuvvetin Hareket Üzerindeki Etkisi</h3>
+          <p class="card-meta">İşaret diliyle kuvvet analizi • 5 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Duran cisme farklı kuvvetler uygulayarak hareket gözlemi</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Sürat ve Hız İlişkisi</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Sürat ve Hız Kavramları</h3>
+          <p class="card-meta">İşaret diliyle yol-zaman ilişkisi • 6 dk</p>
+          <a class="btn" href="#video-3">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Farklı hızlarla hareket eden cisimlerin karşılaştırılması</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal 1 -->
+  <div id="video-1" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Bileşke Kuvvetin Hesaplanması</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Aynı doğrultudaki kuvvetlerin yön ve büyüklüklerine göre bileşke kuvvetin nasıl hesaplandığı işaret diliyle anlatılır.</p>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="video-2" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Kuvvetin Hareket Üzerindeki Etkisi</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Dengelenmiş ve dengelenmemiş kuvvetlerin bir cismin hareketine etkisi deneysel örneklerle açıklanır.</p>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div id="video-3" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Sürat ve Hız Kavramları</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Sürat ve hız arasındaki farklar, alınan yol ve zaman ilişkisiyle birlikte işaret diliyle anlatılır.</p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolarda arya ve kısa özet eklenmiştir, tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+</body>
+</html>

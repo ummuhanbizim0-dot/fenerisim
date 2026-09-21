@@ -1,0 +1,132 @@
+/* Genel sayfa stili */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 20px;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Sınıfları yatay sıraya dizen yapı */
+.grade-row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+/* Her sınıf sütunu */
+.grade-column {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  min-width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.grade-column h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #006699;
+}
+
+/* Video kutularını düzenleyen yapı */
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.video-box {
+  position: relative;
+  background-color: #fafafa;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+/* Video görünümü */
+.video-box video {
+  width: 100%;
+  border-radius: 6px;
+  outline: none;
+}
+
+/* Açıklama metni */
+.caption {
+  margin-top: 8px;
+  font-size: 14px;
+  text-align: center;
+  color: #444;
+}
+
+/* İşaret dili simgesi */
+.icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+}
+
+/* Modal pencere */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal içindeki video */
+.modal video {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+/* Kapatma butonu */
+.close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+.scroll-button {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #006699;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: none;
+}
+
+.scroll-button.right {
+  right: 10px;
+}
+
+.scroll-button.left {
+  left: 10px;
+}

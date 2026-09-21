@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bilimsel Keşif Yolculuğu – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/3sinifkonu.css') }}">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Bilimsel Keşif Yolculuğu – İşaret Dili Video Kütüphanesi</h1>
+      <p>3. Sınıf I Bilimsel bilgiye ulaşma yolları ve bilim insanlarının özellikleri işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtre ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Bilgiye Ulaşma</a>
+        <a href="#" class="chip">Bilim İnsanları</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <!-- Bilimsel Bilgiye Ulaşma -->
+      <article class="card">
+        <div class="thumb" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1581090700227-1e7e8c9d9c3c?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Bilgiye Ulaşma</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Bilimsel Bilgiye Ulaşma Yolları</h3>
+          <p class="card-meta">Gözlem, tahmin, deney • 6 dk</p>
+          <a class="btn" href="#v-bilgi">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <!-- Bilim İnsanlarının Özellikleri -->
+      <article class="card">
+        <div class="thumb" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1559757175-5700dde67548?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Bilim İnsanları</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Bilim İnsanlarının Özellikleri</h3>
+          <p class="card-meta">Merak, sabır, sorgulama • 5 dk</p>
+          <a class="btn" href="#v-insan">Videoyu Aç</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>İşaret dili anlatımlarına altyazı ve kısa özetler eklidir. Eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+
+  <!-- Modal: Bilgiye Ulaşma -->
+  <!-- Modal: Bilgiye Ulaşma -->
+<div id="v-bilgi" class="modal" role="dialog" aria-modal="true" aria-labelledby="t-bilgi">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close" aria-label="Kapat">×</a>
+    <h2 id="t-bilgi" class="modal-title">Bilimsel Bilgiye Ulaşma Yolları</h2>
+          
+    <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/000000') }}" type="video/mp4">
+      </video>
+    </div>
+
+
+
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-bilgi')" class="pill transcript-btn">Altyazı İçin Tıklayın</button>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Gözlem, tahmin, ölçüm ve deney gibi bilimsel bilgiye ulaşma yolları işaret diliyle anlatılır.</p>
+
+    <div id="transcript-bilgi" style="display: none;">
+      <h3>🎬 Bilimsel Bilgiye Ulaşma Yolları – İşaret Dili Transkripti</h3>
+      <p>
+        GÖZLEM → İNCELE<br>
+        TAHMİN → DÜŞÜN<br>
+        DENEY → SINA<br>
+        ÖLÇÜM → SAYI KULLAN<br>
+        SONUÇ → PAYLAŞ
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Bilim İnsanları -->
+<div id="v-insan" class="modal" role="dialog" aria-modal="true" aria-labelledby="t-insan">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close" aria-label="Kapat">×</a>
+    <h2 id="t-insan" class="modal-title">Bilim İnsanlarının Özellikleri</h2>
+          
+    <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/000000') }}" type="video/mp4">
+      </video>
+    </div>
+
+
+
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-insan')" class="pill transcript-btn">Altyazı İçin Tıklayın</button>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Bilim insanlarının meraklı, sabırlı, sorgulayıcı ve araştırmacı özellikleri örneklerle açıklanır.</p>
+
+    <div id="transcript-insan" style="display: none;">
+      <h3>🎬 Bilim İnsanlarının Özellikleri – İşaret Dili Transkripti</h3>
+      <p>
+        MERAK → SORU SOR<br>
+        SABIR → BEKLE<br>
+        GÖZLEM → DİKKAT ET<br>
+        AZİM → VAZGEÇME<br>
+        DÜRÜSTLÜK → GERÇEĞİ SÖYLE
+      </p>
+    </div>
+  </div>
+</div>
+  <script>
+  function toggleTranscript(id) {
+    const box = document.getElementById(id);
+    const isHidden = box.style.display === "none";
+
+    box.style.display = isHidden ? "block" : "none";
+
+    if (isHidden) {
+      setTimeout(() => {
+        box.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }
+</script>
+</body>
+</html>

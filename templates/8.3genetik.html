@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yaşamın Gizemi – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/8sinifkonu.css') }}">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Yaşamın Gizemi – İşaret Dili Video Kütüphanesi</h1>
+      <p>8. Sınıf Fen Bilimleri | Genetik yapı, hücre bölünmeleri, kalıtım ve canlıların çevreye uyumu işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">DNA ve Genetik Kod</a>
+        <a href="#" class="chip">Mitoz ve Mayoz</a>
+        <a href="#" class="chip">Kalıtım</a>
+        <a href="#" class="chip">Mutasyon ve Adaptasyon</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb"><span class="badge">DNA ve Genetik Kod</span></div>
+        <div class="card-body">
+          <h3 class="card-title">DNA'nın Yapısı ve Görevi</h3>
+          <p class="card-meta">İşaret diliyle genetik bilgi • 6 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+          <p class="experiment">🧪 Etkinlik: DNA modeli oluşturma</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Mitoz ve Mayoz</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Hücre Bölünmeleri</h3>
+          <p class="card-meta">İşaret diliyle mitoz ve mayoz farkları • 5 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+          <p class="experiment">🧪 Poster: Mitoz ve mayoz karşılaştırma tablosu</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Kalıtım</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Genetik Özelliklerin Aktarımı</h3>
+          <p class="card-meta">İşaret diliyle çaprazlama • 6 dk</p>
+          <a class="btn" href="#video-3">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Bezelye bitkisi ile karakter aktarımı</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Mutasyon ve Adaptasyon</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Canlıların Değişimi ve Uyum</h3>
+          <p class="card-meta">İşaret diliyle çevresel etki • 5 dk</p>
+          <a class="btn" href="#video-4">Videoyu Aç</a>
+          <p class="experiment">🧪 Poster: Kutup ayısı ve çöl tilkisi örnekleri</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal örnekleri -->
+  <div id="video-1" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">DNA'nın Yapısı ve Görevi</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">DNA'nın nükleotidlerden oluşan yapısı ve genetik bilgiyi taşıma görevi işaret diliyle anlatılır.</p>
+    </div>
+  </div>
+
+  <!-- Diğer modallar benzer şekilde eklenebilir -->
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolarda arya ve kısa özet eklenmiştir, tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

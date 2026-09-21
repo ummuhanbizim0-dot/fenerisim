@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mevsimler ve İklim – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/8sinifkonu.css') }}">
+</head>
+<body>
+    
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Mevsimler ve İklim – İşaret Dili Video Kütüphanesi</h1>
+      <p>8. Sınıf Fen Bilimleri | Dünya’nın hareketleri, mevsim oluşumu ve iklim farkları işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Dünya’nın Hareketleri</a>
+        <a href="#" class="chip">Mevsimlerin Oluşumu</a>
+        <a href="#" class="chip">İklim ve Hava Olayları</a>
+        <a href="#" class="chip">Gözlem ve Modelleme</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb"><span class="badge">Dünya’nın Hareketleri</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Dünya’nın Dönme ve Dolanma Hareketi</h3>
+          <p class="card-meta">İşaret diliyle hareket modeli • 5 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Dünya modeliyle gece-gündüz oluşumu</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Mevsimlerin Oluşumu</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Mevsimlerin Oluşumu</h3>
+          <p class="card-meta">İşaret diliyle eksen eğikliği • 6 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Eksen eğikliği ve mevsim simülasyonu</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">İklim ve Hava Olayları</span></div>
+        <div class="card-body">
+          <h3 class="card-title">İklim ve Hava Olayları</h3>
+          <p class="card-meta">İşaret diliyle iklim farkları • 5 dk</p>
+          <a class="btn" href="#video-3">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Türkiye iklim haritası ile bölge karşılaştırması</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal 1 -->
+  <div id="video-1" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Dünya'nın Dönme ve Dolanma Hareketi</h2>
+     
+      <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/0000000000000') }}" type="video/mp4">
+      </video>
+    </div>
+   
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-1')" class="pill transcript-btn">Altyazı İçin Tıklayın</button>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Dünya'nın kendi etrafında dönmesi ve Güneş etrafında dolanması işaret diliyle anlatılır.</p>
+
+    <div id="transcript-1" style="display: none;">
+      <h3>🎬 Dünya'nın Hareketleri – İşaret Dili Transkripti</h3>
+      <p>
+        DÜNYA → EKSEN → DÖNME → 24 SAAT<br>
+        DÖNME → GECE-GÜNDÜZ<br>
+        DÜNYA → GÜNEŞ ETRAFI → DOLANMA → 365 GÜN 6 SAAT
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="video-2" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Mevsimlerin Oluşumu</h2>
+    
+      <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/0000000000000') }}" type="video/mp4">
+      </video>
+    </div>
+   
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-2')" class="pill transcript-btn">Altyazı İçin Tıklayın</button>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Dünya'nın eksen eğikliği ve dolanma hareketiyle mevsimlerin nasıl oluştuğu işaret diliyle açıklanır.</p>
+
+    <div id="transcript-2" style="display: none;">
+      <h3>🎬 Mevsimlerin Oluşumu – İşaret Dili Transkripti</h3>
+      <p>
+        DÜNYA → EKSEN EĞİK → 23.5 DERECE<br>
+        EĞİKLİK + DOLANMA → MEVSİM DEĞİŞİR<br>
+        GÜNEŞ IŞINI → DİK AÇI → YAZ<br>
+        GÜNEŞ IŞINI → EĞİK AÇI → KIŞ
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="video-3" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">İklim ve Hava Olayları</h2>
+  
+      <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/0000000000000') }}" type="video/mp4">
+      </video>
+    </div>
+   
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-3')" class="pill transcript-btn">Altyazı İçin Tıklayın</button>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">İklim çeşitleri, hava olayları ve Türkiye'deki iklim bölgeleri işaret diliyle anlatılır.</p>
+
+    <div id="transcript-3" style="display: none;">
+      <h3>🎬 İklim ve Hava Olayları – İşaret Dili Transkripti</h3>
+      <p>
+        HAVA DURUMU → KISA SÜRELİ<br>
+        İKLİM → UZUN SÜRELİ ORTALAMA<br>
+        TÜRKİYE → FARKLI İKLİM BÖLGELERİ<br>
+        KARADENİZ → YAĞIŞLI<br>
+        AKDENİZ → KURAK YAZ
+      </p>
+    </div>
+  </div>
+</div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolarda kısa özet ve deney önerisi eklenmiştir. Tüm içerikler MEB müfredatına uygun ve eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+
+  <script>
+  function toggleTranscript(id) {
+    const box = document.getElementById(id);
+    const isHidden = box.style.display === "none";
+
+    box.style.display = isHidden ? "block" : "none";
+
+    if (isHidden) {
+      setTimeout(() => {
+        box.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }
+</script>
+</body>
+</html>

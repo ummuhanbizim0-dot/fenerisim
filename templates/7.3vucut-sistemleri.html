@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vücudumuzdaki Sistemler – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/7sinifkonu.css') }}">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Vücudumuzdaki Sistemler – İşaret Dili Video Kütüphanesi</h1>
+      <p>7. Sınıf Fen Bilimleri | Sindirim, dolaşım, solunum, boşaltım sistemleri ve kan bağışı işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Sindirim Sistemi</a>
+        <a href="#" class="chip">Dolaşım Sistemi</a>
+        <a href="#" class="chip">Kan Bağışı</a>
+        <a href="#" class="chip">Solunum Sistemi</a>
+        <a href="#" class="chip">Boşaltım Sistemi</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb"><span class="badge">Sindirim Sistemi</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Sindirim Organları ve Görevleri</h3>
+          <p class="card-meta">İşaret diliyle sindirim süreci • 6 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+          <p class="experiment">🧪 Etkinlik: Besinlerin vücutta izlediği yolun modellenmesi</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Dolaşım Sistemi</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Kalp, Kan ve Damarlar</h3>
+          <p class="card-meta">İşaret diliyle dolaşım sistemi • 5 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Nabız ölçümü ve kan dolaşımı gözlemi</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Kan Bağışı</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Toplumsal Dayanışma ve Kan Bağışı</h3>
+          <p class="card-meta">İşaret diliyle sosyal farkındalık • 5 dk</p>
+          <a class="btn" href="#video-3">Videoyu Aç</a>
+          <p class="experiment">🧪 Poster: Kan bağışının önemi ve süreci</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Solunum Sistemi</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Akciğerler ve Solunum Organları</h3>
+          <p class="card-meta">İşaret diliyle solunum sistemi • 6 dk</p>
+          <a class="btn" href="#video-4">Videoyu Aç</a>
+          <p class="experiment">🧪 Maket: Solunum sistemi modeli hazırlama</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Boşaltım Sistemi</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Böbrekler ve Atıkların Uzaklaştırılması</h3>
+          <p class="card-meta">İşaret diliyle boşaltım sistemi • 5 dk</p>
+          <a class="btn" href="#video-5">Videoyu Aç</a>
+          <p class="experiment">🧪 Etkinlik: Boşaltım organlarının görevlerinin tanıtımı</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal örnekleri -->
+  <div id="video-1" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Sindirim Organları ve Görevleri</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Sindirim sistemini oluşturan yapı ve organlar ile görevleri işaret diliyle anlatılır.</p>
+    </div>
+  </div>
+
+  <!-- Diğer modallar benzer şekilde eklenebilir -->
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolarda arya ve kısa özet eklenmiştir, tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

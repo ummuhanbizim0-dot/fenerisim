@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Güneş, Dünya ve Ay – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/5sinifkonu.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Güneş, Dünya ve Ay – İşaret Dili Video Kütüphanesi</h1>
+      <p>5. Sınıf Fen Bilimleri | Güneş’in yapısı, Ay’ın evreleri ve Dünya’nın hareketlerini işaret diliyle öğren.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Güneş</a>
+        <a href="#" class="chip">Ay</a>
+        <a href="#" class="chip">Dünya</a>
+        <a href="#" class="chip">Gölge Oluşumu</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb">
+          <img src="C:\Users\LENOVO\Desktop\tmsf\Ekran.PNG" alt="">
+          <span class="badge">Konu: Güneş</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Güneş’in Yapısı ve Özellikleri</h3>
+          <p class="card-meta">İşaret diliyle Güneş’in temel özellikleri • 6 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1502786129293-79981df4e689?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Ay</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Ay’ın Yapısı ve Evreleri</h3>
+          <p class="card-meta">İşaret diliyle Ay’ın hareketleri • 7 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Dünya</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Dünya’nın Hareketleri</h3>
+          <p class="card-meta">İşaret diliyle dönme ve dolanma • 5 dk</p>
+          <a class="btn" href="#video-3">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Gölge Oluşumu</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Gölge ve Işık Kaynağı</h3>
+          <p class="card-meta">İşaret diliyle gölge boyu ve yönü • 6 dk</p>
+          <a class="btn" href="#video-4">Videoyu Aç</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  
+
+<!-- Modal pencereler -->
+<div id="video-1" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Güneş'in Yapısı ve Özellikleri</h2>
+
+    <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/atid.mp4') }}" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-1')" class="pill transcript-btn">Altyazı İçin Tıklayın</button>
+      <p class="pill">İşaret Dili Destekli</p>
+    </div>
+
+    <p class="desc">Güneş'in ışık ve ısı kaynağı olarak rolü, yapısı ve etkileri anlatılır.</p>
+
+    <div id="transcript-1" style="display: none;">
+      <h3>🎬 Güneş'in Yapısı – İşaret Dili Transkripti</h3>
+      <p>
+        GÜNEŞ → SICAK → GAZ<br>
+        GÜNEŞ → DÖN<br>
+        GÜNEŞ → PARLA<br>
+        GÜNEŞ → LEKE → GÖRÜNÜR<br>
+        GÜNEŞ → MODEL → KULLAN<br><br>
+        GÜNEŞ → BAKMA → GÖZ ZARAR<br>
+        GÜNEŞ → GÖZLEM → FİLTRE → TELESKOP
+      </p>
+    </div>
+  </div>
+</div>
+<!-- VİDEO 2 -->
+  <<div id="video-2" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Ay'ın Yapısı ve Evreleri</h2>
+    
+    
+    <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/atid.mp4') }}" type="video/mp4">
+      </video>
+    </div>
+
+
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-2')" class="pill transcript-btn">Altyazı var</button>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Ay'ın evreleri, hareketleri ve Dünya ile ilişkisi görsellerle açıklanır.</p>
+
+    <div id="transcript-2" style="display: none;">
+      <h3>🎬 Ay'ın Yapısı ve Evreleri – İşaret Dili Transkripti</h3>
+      <p>
+        AY → DÖNME → DÜNYA'YA BAĞLI<br>
+        AY → EVRE → DEĞİŞİR<br>
+        AY → YENİAY → HİLAL → DOLUNAY<br>
+        AY → IŞIK → KENDİ ÜRETMEZ<br>
+        AY → YANSITMA → GÜNEŞ IŞIĞI
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- VİDEO 3  -->
+  <div id="video-3" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Dünya'nın Hareketleri</h2>
+    
+
+    <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/atid.mp4') }}" type="video/mp4">
+      </video>
+    </div>
+
+
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-3')" class="pill transcript-btn">Altyazı var</button>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Dünya'nın dönme ve dolanma hareketleri, gece-gündüz oluşumu ile ilişkilendirilir.</p>
+
+    <div id="transcript-3" style="display: none;">
+      <h3>🎬 Dünya'nın Hareketleri – İşaret Dili Transkripti</h3>
+      <p>
+        DÜNYA → DÖNME → 24 SAAT<br>
+        DÜNYA → DOLANMA → 365 GÜN<br>
+        DÖNME → GECE-GÜNDÜZ<br>
+        DOLANMA → MEVSİM DEĞİŞİMİ
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- VİDEO 4  -->
+  <div id="video-4" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Gölge ve Işık Kaynağı</h2>
+    
+
+    <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/atid.mp4') }}" type="video/mp4">
+      </video>
+    </div>
+
+    
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-4')" class="pill transcript-btn">Altyazı var</button>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Gölge oluşumu, gölge boyunu etkileyen faktörler ve deney örnekleri.</p>
+
+    <div id="transcript-4" style="display: none;">
+      <h3>🎬 Gölge ve Işık Kaynağı – İşaret Dili Transkripti</h3>
+      <p>
+        IŞIK → CİSİM → GÖLGE OLUŞUR<br>
+        IŞIK KAYNAĞI → YAKIN → GÖLGE BÜYÜK<br>
+        IŞIK KAYNAĞI → UZAK → GÖLGE KÜÇÜK<br>
+        SAAT → GÖLGE BOYU → DEĞİŞİR
+      </p>
+    </div>
+  </div>
+</div>
+<section class="experiments">
+      <h3>🧪 Deneyler</h3>
+      <div class="experiment-card">
+        <h4>Su ve Yağ Deneyi</h4>
+        <p>Malzemeler: Su, yağ, gıda boyası, şeffaf kap</p>
+        <a href="/video/su-yag-deneyi">İşaret diliyle anlatım</a>
+      </div>
+    </section>
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolara altyazı ve kısa özet eklenmiştir. Tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+<script>
+  function toggleTranscript(id) {
+    const box = document.getElementById(id);
+    const isHidden = box.style.display === "none";
+
+    box.style.display = isHidden ? "block" : "none";
+
+    if (isHidden) {
+      setTimeout(() => {
+        box.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }
+</script>>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sesin Dünyası – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/8sinifkonu.css') }}">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Sesin Dünyası – İşaret Dili Video Kütüphanesi</h1>
+      <p>8. Sınıf Fen Bilimleri | Sesin oluşumu, yayılması, yansıması ve çevresel etkileri işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Sesin Oluşumu</a>
+        <a href="#" class="chip">Uzaklık ve Ses Şiddeti</a>
+        <a href="#" class="chip">Yansıma ve Soğurulma</a>
+        <a href="#" class="chip">Ses Kirliliği</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb"><span class="badge">Sesin Oluşumu</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Titreşimle Oluşan Ses</h3>
+          <p class="card-meta">İşaret diliyle sesin kaynağı • 5 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Farklı cisimlerde titreşimle ses üretimi</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Uzaklık ve Ses Şiddeti</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Sesin Şiddeti ve İşitme</h3>
+          <p class="card-meta">İşaret diliyle uzaklık etkisi • 6 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Ses kaynağına uzaklıkla işitme farkı</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Yansıma ve Soğurulma</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Sesin Ortamla Etkileşimi</h3>
+          <p class="card-meta">İşaret diliyle yankı ve yutulma • 5 dk</p>
+          <a class="btn" href="#video-3">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Sert ve yumuşak yüzeylerde ses davranışı</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Ses Kirliliği</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Gürültü ve Sağlık</h3>
+          <p class="card-meta">İşaret diliyle çevresel etkiler • 5 dk</p>
+          <a class="btn" href="#video-4">Videoyu Aç</a>
+          <p class="experiment">🧪 Proje: Ses kirliliğini azaltmaya yönelik çözüm önerisi</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal örnekleri -->
+  <div id="video-1" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Titreşimle Oluşan Ses</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Sesin titreşim sonucu oluştuğu ve dalgalar halinde yayıldığı işaret diliyle anlatılır.</p>
+    </div>
+  </div>
+
+  <!-- Diğer modallar benzer şekilde eklenebilir -->
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolarda arya ve kısa özet eklenmiştir, tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

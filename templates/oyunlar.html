@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>Oyun | FenErişim</title>
+  <style>
+  
+  </style>
+</head>
+<body>
+  <!-- Menü ve logo -->
+  <nav>
+  
+    <!-- <span class="logo-text" style="cursor:pointer;">FenErişim</span> -->
+    <script>
+      document.querySelector(".logo-text").addEventListener("click", function() {
+        window.location.href = "index.html";
+      });
+    </script>
+  <br>     <li style="margin: 0 15px;"><a href="/">Ana Sayfa</a></li>
+<li style="margin: 0 15px;"><a href="/hakkinda">Hakkımızda</a></li>
+<li style="margin: 0 15px;"><a href="/iletisim">İletişim</a></li>
+<li style="margin: 0 15px;"><a href="/blog-haberler">Blog/Haberler</a></li>
+      <li style="margin: 0 15px;"><a href="#auth-section" data-tab="login">Giriş Yap</a></li>
+      <li style="margin: 0 15px;"><a href="#auth-section" data-tab="register">Kayıt Ol</a></li>
+    </ul>
+  </nav>
+
+  <!-- Oyun alanı -->
+  <section class="game-container">
+    <h1>🎮 FenErişim Etkileşimli Oyun</h1>
+    <iframe src="https://app.genially.com/editor/67b226c3667095903fca6500" allowfullscreen></iframe>
+  </section>
+
+  <!-- Giriş/Kayıt formu (hakkında.html’deki gibi) -->
+  <div id="auth-section" class="auth-container" style="display: none;">
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="login">Giriş Yap</button>
+      <button class="tab-btn" data-tab="register">Kayıt Ol</button>
+    </div>
+
+    <div id="login" class="tab-content active">
+      <h2>Giriş Yap</h2>
+      <form method="post" action="/login">
+        <label for="login-email">E-posta:</label>
+        <input type="email" id="login-email" name="email" required />
+        <label for="login-password">Şifre:</label>
+        <input type="password" id="login-password" name="password" required />
+        <button type="submit">Giriş Yap</button>
+      </form>
+    </div>
+
+    <div id="register" class="tab-content">
+      <h2>Kayıt Ol</h2>
+      <form method="post" action="/register">
+        <label for="name">Ad Soyad:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="register-email">E-posta:</label>
+        <input type="email" id="register-email" name="email" required />
+        <label for="register-password">Şifre:</label>
+        <input type="password" id="register-password" name="password" required />
+        <label for="role">Kullanıcı Türü:</label>
+        <select id="role" name="role">
+          <option value="öğrenci">Öğrenci</option>
+          <option value="öğretmen">Öğretmen</option>
+          <option value="veli">Veli</option>
+        </select>
+        <button type="submit">Kayıt Ol</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JS sekme geçişleri -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll('a[href="#auth-section"]').forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const tab = this.dataset.tab;
+          document.getElementById('auth-section').style.display = 'block';
+          activateTab(tab);
+          window.scrollTo({ top: document.getElementById('auth-section').offsetTop, behavior: 'smooth' });
+        });
+      });
+
+      function activateTab(tabId) {
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.tab === tabId);
+        });
+        document.querySelectorAll('.tab-content').forEach(content => {
+          content.classList.toggle('active', content.id === tabId);
+        });
+      }
+
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activateTab(btn.dataset.tab);
+        });
+      });
+    });
+  </script>
+
+  <footer>
+    <p>© 2025 FenErişim | Erişilebilir Bilim Eğitimi</p>
+  </footer>
+</body>
+</html>

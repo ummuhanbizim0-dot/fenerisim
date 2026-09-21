@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saf Maddeler ve Karışımlar – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/7sinifkonu.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Saf Maddeler ve Karışımlar – İşaret Dili Video Kütüphanesi</h1>
+      <p>7. Sınıf Fen Bilimleri | Madde sınıflandırma, karışım türleri ve ayırma yöntemleri işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Saf Maddeler</a>
+        <a href="#" class="chip">Ayırt Edici Özellikler</a>
+        <a href="#" class="chip">Karışım Türleri</a>
+        <a href="#" class="chip">Ayırma Yöntemleri</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1581091870622-1e7e8e3d7d5a?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Saf Madde</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Saf Madde ve Karışım Ayrımı</h3>
+          <p class="card-meta">İşaret diliyle madde sınıflandırması • 5 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1588776814546-ec7b5f1e1e2c?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Özellikler</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Maddelerin Ayırt Edici Özellikleri</h3>
+          <p class="card-meta">İşaret diliyle yoğunluk, erime noktası • 6 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1505575972945-338c3fdde642?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Karışım Türleri</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Homojen ve Heterojen Karışımlar</h3>
+          <p class="card-meta">İşaret diliyle örneklerle açıklama • 7 dk</p>
+          <a class="btn" href="#video-3">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Ayırma</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Karışımları Ayırma Yöntemleri</h3>
+          <p class="card-meta">İşaret diliyle süzme, mıknatıs, buharlaştırma • 6 dk</p>
+          <a class="btn" href="#video-4">Videoyu Aç</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolara altyazı ve kısa özet eklenmiştir. Tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+
+  <!-- Modal pencereler buraya eklenebilir -->
+   <div id="video-md1" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Atomun Yapısı</h2>
+    <div class="player">
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_MD1" allowfullscreen></iframe>
+    </div>
+    <div class="meta">
+      <p class="pill">Altyazı var</p>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Atomun temel parçacıkları, proton, nötron ve elektronun görevleri anlatılır.</p>
+  </div>
+</div>
+
+<div id="video-md2" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Element ve Bileşik Ayrımı</h2>
+    <div class="player">
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_MD2" allowfullscreen></iframe>
+    </div>
+    <div class="meta">
+      <p class="pill">Altyazı var</p>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Elementlerin sembolleri, bileşiklerin formülleri ve örneklerle açıklama yapılır.</p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Güneş Sistemi ve Ötesi – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/7sinifkonu.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Güneş Sistemi ve Ötesi – İşaret Dili Video Kütüphanesi</h1>
+      <p>7. Sınıf Fen Bilimleri | Gezegenler, Ay, yıldızlar ve uzay teknolojileri işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Güneş Sistemi</a>
+        <a href="#" class="chip">Gezegenler</a>
+        <a href="#" class="chip">Ay ve Hareketleri</a>
+        <a href="#" class="chip">Yıldızlar</a>
+        <a href="#" class="chip">Uzay Teknolojisi</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Güneş Sistemi</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Güneş Sistemi’nin Yapısı</h3>
+          <p class="card-meta">İşaret diliyle sistemin tanıtımı • 5 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1581090700227-1e7e8e3d7d5a?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Gezegenler</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Gezegenlerin Özellikleri</h3>
+          <p class="card-meta">İşaret diliyle gezegen karşılaştırması • 6 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1505575972945-338c3fdde642?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Ay</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Ay’ın Yapısı ve Hareketleri</h3>
+          <p class="card-meta">İşaret diliyle Ay evreleri • 7 dk</p>
+          <a class="btn" href="#video-3">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Yıldızlar</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Yıldızların Yapısı ve Sınıflandırılması</h3>
+          <p class="card-meta">İşaret diliyle yıldız türleri • 6 dk</p>
+          <a class="btn" href="#video-4">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Uzay Teknolojisi</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Uzay Araştırmaları ve Teknolojileri</h3>
+          <p class="card-meta">İşaret diliyle bilimsel gelişmeler • 7 dk</p>
+          <a class="btn" href="#video-5">Videoyu Aç</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolara altyazı ve kısa özet eklenmiştir. Tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+
+  <div id="video-1" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Güneş Sistemi'nin Yapısı</h2>
+     
+      <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/0000000000000') }}" type="video/mp4">
+      </video>
+    </div>
+   
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-1')" class="pill transcript-btn">Altyazı İçin Tıklayın</button>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Güneş, gezegenler ve diğer gök cisimlerinin konumu ve özellikleri anlatılır.</p>
+
+    <div id="transcript-1" style="display: none;">
+      <h3>🎬 Güneş Sistemi'nin Yapısı – İşaret Dili Transkripti</h3>
+      <p>
+        GÜNEŞ → YILDIZ<br>
+        SİSTEM → GEZEGEN + UYDU + ASTEROİT<br>
+        MERKEZ → GÜNEŞ<br>
+        ÇEKİM KUVVETİ → BAĞLAR
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="video-2" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Gezegenlerin Özellikleri</h2>
+    
+      <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/0000000000000') }}" type="video/mp4">
+      </video>
+    </div>
+   
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-2')" class="pill transcript-btn">Altyazı İçin Tıklayın</button>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Gezegenlerin büyüklük, sıcaklık ve konumlarına göre karşılaştırılması yapılır.</p>
+
+    <div id="transcript-2" style="display: none;">
+      <h3>🎬 Gezegenlerin Özellikleri – İşaret Dili Transkripti</h3>
+      <p>
+        MERKÜR → KÜÇÜK + SICAK<br>
+        VENÜS → EN SICAK<br>
+        DÜNYA → YAŞAM VAR<br>
+        MARS → KIZIL<br>
+        JÜPİTER → EN BÜYÜK<br>
+        SATÜRN → HALKALI
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="video-3" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Ay'ın Yapısı ve Hareketleri</h2>
+     
+      <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/0000000000000') }}" type="video/mp4">
+      </video>
+    </div>
+   
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-3')" class="pill transcript-btn">Altyazı İçin Tıklayın</button>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Ay'ın evreleri, Dünya etrafındaki hareketi ve gözlemlenebilir değişimleri anlatılır.</p>
+
+    <div id="transcript-3" style="display: none;">
+      <h3>🎬 Ay'ın Yapısı ve Hareketleri – İşaret Dili Transkripti</h3>
+      <p>
+        AY → KRATERLİ YÜZEY<br>
+        AY → ATMOSFER YOK<br>
+        AY → DÜNYA ETRAFINDA DÖNER<br>
+        AY → EVRE DEĞİŞİR
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="video-4" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Yıldızların Yapısı ve Sınıflandırılması</h2>
+     
+      <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/0000000000000') }}" type="video/mp4">
+      </video>
+    </div>
+   
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-4')" class="pill transcript-btn">Altyazı İçin Tıklayın</button>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Yıldızların sıcaklık, büyüklük ve renklerine göre sınıflandırılması işaret diliyle anlatılır.</p>
+
+    <div id="transcript-4" style="display: none;">
+      <h3>🎬 Yıldızların Yapısı – İşaret Dili Transkripti</h3>
+      <p>
+        YILDIZ → KENDİ IŞIĞINI ÜRETİR<br>
+        YILDIZ → SICAKLIK → RENK DEĞİŞİR<br>
+        MAVİ → EN SICAK<br>
+        KIRMIZI → SERİN<br>
+        GÜNEŞ → SARI YILDIZ
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="video-5" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Uzay Araştırmaları ve Teknolojileri</h2>
+    
+      <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/0000000000000') }}" type="video/mp4">
+      </video>
+    </div>
+   
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-5')" class="pill transcript-btn">Altyazı İçin Tıklayın</button>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Teleskoplar, uydular, roketler ve uzay istasyonları hakkında bilgi verilir.</p>
+
+    <div id="transcript-5" style="display: none;">
+      <h3>🎬 Uzay Araştırmaları – İşaret Dili Transkripti</h3>
+      <p>
+        TELESKOP → UZAK CİSİM → GÖZLEM<br>
+        UYDU → DÜNYA ETRAFINDA DÖNER<br>
+        ROKET → UZAYA TAŞIR<br>
+        UZAY İSTASYONU → İNSAN YAŞAR
+      </p>
+    </div>
+  </div>
+</div>
+  </main>
+<script>
+  function toggleTranscript(id) {
+    const box = document.getElementById(id);
+    const isHidden = box.style.display === "none";
+
+    box.style.display = isHidden ? "block" : "none";
+
+    if (isHidden) {
+      setTimeout(() => {
+        box.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }
+</script>
+</body>
+</html>

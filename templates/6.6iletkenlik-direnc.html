@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elektriğin İletimi ve Direnç – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/5sinifkonu.css') }}">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Elektriğin İletimi ve Direnç – İşaret Dili Video Kütüphanesi</h1>
+      <p>6. Sınıf Fen Bilimleri | Elektrik iletkenliği, direnç ve devre elemanları işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Elektriğin İletimi</a>
+        <a href="#" class="chip">Elektriksel Direnç</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb"><span class="badge">Elektriğin İletimi</span></div>
+        <div class="card-body">
+          <h3 class="card-title">İletken ve Yalıtkan Maddeler</h3>
+          <p class="card-meta">İşaret diliyle devre kurulumu • 5 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Farklı maddelerin elektrik iletkenliğini test etme</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Elektriksel Direnç</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Ampul Parlaklığı ve Direnç</h3>
+          <p class="card-meta">İşaret diliyle devre analizi • 6 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Direncin ampul parlaklığına etkisi</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Elektriksel Direnç</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Reosta ve Ayarlanabilir Direnç</h3>
+          <p class="card-meta">İşaret diliyle direnç kontrolü • 5 dk</p>
+          <a class="btn" href="#video-3">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Reosta ile devredeki akımı ve parlaklığı değiştirme</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal 1 -->
+  <div id="video-1" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">İletken ve Yalıtkan Maddeler</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Farklı maddelerin elektrik iletkenliği test edilerek iletken ve yalıtkan sınıflandırması yapılır.</p>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="video-2" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Ampul Parlaklığı ve Direnç</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Elektrik devresindeki ampul parlaklığının dirençle nasıl değiştiği işaret diliyle anlatılır.</p>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div id="video-3" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Reosta ve Ayarlanabilir Direnç</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Reosta kullanılarak devredeki akım ve parlaklık kontrolü deneysel olarak gösterilir.</p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolarda arya ve kısa özet eklenmiştir, tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

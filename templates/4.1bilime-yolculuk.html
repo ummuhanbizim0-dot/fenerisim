@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bilime Yolculuk – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/4sinifkonu.css') }}">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Bilime Yolculuk – İşaret Dili Video Kütüphanesi</h1>
+      <p>4. Sınıf Fen Bilimleri | Bilimin özellikleri ve güvenilir bilgi kaynakları işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Bilimin Özellikleri</a>
+        <a href="#" class="chip">Bilgi Kaynaklarının Güvenilirliği</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb"><span class="badge">Bilimin Özellikleri</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Bilim Nedir?</h3>
+          <p class="card-meta">İşaret diliyle tanım ve örnekler • 5 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+          <p class="experiment">🧪 Etkinlik: Bilimsel bilgi ile günlük bilgi karşılaştırması</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Bilgi Kaynaklarının Güvenilirliği</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Güvenilir Bilgi Nasıl Anlaşılır?</h3>
+          <p class="card-meta">İşaret diliyle sorgulama becerisi • 6 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+          <p class="experiment">🧪 Uygulama: Bilgi kaynağı değerlendirme listesi oluşturma</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal örnekleri -->
+  <!-- Modal örnekleri -->
+<div id="video-1" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Bilim Nedir?</h2>
+       
+    <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/000000') }}" type="video/mp4">
+      </video>
+    </div>
+
+
+
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-1')" class="pill transcript-btn">Altyazı İçin Tıklayın</button>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Bilimin tanımı, özellikleri ve bilimsel bilgiye ulaşma yolları örneklerle anlatılır.</p>
+
+    <div id="transcript-1" style="display: none;">
+      <h3>🎬 Bilim Nedir? – İşaret Dili Transkripti</h3>
+      <p>
+        BİLİM → GERÇEK → ARAŞTIRMA<br>
+        BİLİM → KANIT → DAYANIR<br>
+        BİLİM → GÖZLEM + DENEY<br>
+        BİLİM → HERKES İÇİN
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="video-2" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Güvenilir Bilgi Nasıl Anlaşılır?</h2>
+    
+    <div class="player">
+      <video controls>
+        <source src="{{ url_for('static', filename='videos/000000') }}" type="video/mp4">
+      </video>
+    </div>
+
+
+    <div class="meta">
+      <button onclick="toggleTranscript('transcript-2')" class="pill transcript-btn">Altyazı İçin Tıklayın</button>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Bilgi kaynaklarının güvenilirliğini sorgulama yolları işaret diliyle anlatılır.</p>
+
+    <div id="transcript-2" style="display: none;">
+      <h3>🎬 Güvenilir Bilgi Nasıl Anlaşılır? – İşaret Dili Transkripti</h3>
+      <p>
+        KAYNAK → GÜVENİLİR Mİ?<br>
+        BİLGİ → KANIT VAR MI?<br>
+        YAZAR → UZMAN MI?<br>
+        TARİH → GÜNCEL Mİ?<br>
+        KARŞILAŞTIR → DOĞRULA
+      </p>
+    </div>
+  </div>
+</div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolarda arya ve kısa özet eklenmiştir, tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+<script>
+  function toggleTranscript(id) {
+    const box = document.getElementById(id);
+    const isHidden = box.style.display === "none";
+
+    box.style.display = isHidden ? "block" : "none";
+
+    if (isHidden) {
+      setTimeout(() => {
+        box.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }
+</script>>
+</body>
+</html>>

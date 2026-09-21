@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Madde ve Isı – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/5sinifkonu.css') }}">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Madde ve Isı – İşaret Dili Video Kütüphanesi</h1>
+      <p>6. Sınıf Fen Bilimleri | Isı etkisi, hâl değişimi ve yoğunluk kavramları işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Isı ve Madde Etkileşimi</a>
+        <a href="#" class="chip">Maddenin Hâl Değişim Noktaları</a>
+        <a href="#" class="chip">Yoğunluk</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb"><span class="badge">Isı ve Madde Etkileşimi</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Genleşme ve Büzülme</h3>
+          <p class="card-meta">İşaret diliyle ısı etkisi • 5 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Metal çubukların ısıtıldığında genleşmesi</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Maddenin Hâl Değişim Noktaları</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Erime, Donma ve Kaynama Noktaları</h3>
+          <p class="card-meta">İşaret diliyle hâl değişimi • 6 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Saf maddelerin hâl değişim sıcaklıklarının ölçülmesi</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Yoğunluk</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Maddelerin Yoğunluğu</h3>
+          <p class="card-meta">İşaret diliyle kütle-hacim ilişkisi • 5 dk</p>
+          <a class="btn" href="#video-3">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Farklı maddelerin yoğunluklarının karşılaştırılması</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal 1 -->
+  <div id="video-1" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Genleşme ve Büzülme</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Isı etkisiyle maddelerin genleşme ve büzülme davranışı işaret diliyle anlatılır.</p>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="video-2" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Erime, Donma ve Kaynama Noktaları</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Saf maddelerin hâl değişim sıcaklıkları deneysel olarak işaret diliyle açıklanır.</p>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div id="video-3" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Maddelerin Yoğunluğu</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Kütle ve hacim ilişkisiyle yoğunluk kavramı işaret diliyle anlatılır.</p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolarda arya ve kısa özet eklenmiştir, tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

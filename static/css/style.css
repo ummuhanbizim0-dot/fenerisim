@@ -1,0 +1,230 @@
+/* Reset ve temel ayarlar */
+* {
+  margin: 0; /* Tüm elementlerin dış boşluğunu sıfırla */
+  padding: 0; /* Tüm elementlerin iç boşluğunu sıfırla */
+  box-sizing: border-box; /* Padding ve border genişliğe dahil olsun */
+  color: #0c0856; /* Varsayılan yazı rengi */
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif; /* Yazı tipi */
+  min-height: 100vh; /* Sayfa yüksekliği en az ekran kadar olsun */
+  display: flex; /* Flex düzeni */
+  flex-direction: column; /* Elemanları dikey sırala */
+}
+
+/* Arka plan */
+body::before {
+  content: "";
+  position: fixed; /* Arka plan sabit */
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to bottom right, #db95fe, #ffffff, #619c98); /* degrade arka plan */
+  z-index: -1; /* İçeriklerin arkasında */
+  backdrop-filter: blur(5px); /* Hafif bulanıklaştır */
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  height: 115px;
+  background-color: rgb(115, 4, 179); /* Mor ton */
+  display: flex; /* Flex düzen */
+  justify-content: space-between; /* Logo sola, arama sağa */
+  align-items: center; /* Dikey ortala */
+  padding: 0 30px;
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 1000;
+}
+
+nav h1 {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Menü listesi (masaüstü) */
+nav ul {
+  list-style: none;
+  display: flex; /* Yatay menü */
+  gap: 7px; /* Elemanlar arası boşluk */
+}
+
+nav ul li a {
+  color: #fff; /* Yazı rengi */
+  text-decoration: none; /* Alt çizgi yok */
+  font-weight: 500;
+  font-size: 17px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffe066; /* Hover rengi */
+}
+
+/* Hamburger ikon (masaüstünde gizli) */
+.menu-toggle {
+  display: none; /* Masaüstünde görünmez */
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Mobil görünüm */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row; /* Logo ve arama yan yana */
+    justify-content: space-between; /* Logo sola, arama sağa */
+    align-items: center;
+    padding: 10px 20px;
+    height: auto;
+  }
+
+  .menu-toggle {
+    display: block; /* Mobilde görünür */
+    margin-left: 10px;
+  }
+
+ nav ul {
+    display: none;          /* Başta gizli */
+    flex-direction: column; /* Alt alta diz */
+    width: 100%;
+    background-color: rgb(90, 0, 140);
+    padding: 10px 0;
+    align-items: center;    /* Ortala */
+  }
+
+nav ul.active {
+    display: flex;          /* ☰ basınca görünür */
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  .search-container {
+    flex: 1; /* Sağ tarafa yerleşsin */
+    display: flex;
+    justify-content: flex-end; /* Sağda hizala */
+  }
+}
+
+/* Logo */
+.logo {
+  width: 125px;
+  height: 111px;
+  border-radius: 27%;
+  object-fit: cover;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.logo-text {
+  font-size: 40px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+/* Arama kutusu */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.search-input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  width: 310px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.search-input::placeholder { color: #eee; }
+.search-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.search-button:hover { background-color: #f0f098; }
+
+/* Header */
+header {
+  text-align: center;
+  background: rgba(148, 137, 198, 0.475);
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin: 40px auto 0;
+}
+
+/* Sınıf butonları */
+.class-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 40px 20px;
+}
+.class-buttons a {
+  background: rgba(66, 9, 109, 0.119);
+  text-decoration: none;
+  padding: 20px 40px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.class-buttons a:hover {
+  background-color: #3d36cc;
+  color: #fff !important;
+  transform: translateY(-5px);
+}
+
+/* Hızlı erişim kartları */
+.quick-access {
+  display: flex;
+  justify-content: center;
+  gap: 17px;
+  margin: 40px auto;
+  flex-wrap: wrap;
+}
+.qa-card {
+  background: rgba(117, 88, 88, 0.146);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 200px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.qa-card:hover {
+  background-color: #3d36cc;
+  color: #fff;
+  transform: translateY(-5px);
+}
+.qa-card .icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: rgb(115, 4, 179);
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: auto;
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fen Deneyleri</title>
+  <!-- <link rel="stylesheet" href=" url_for('static', filename='/fen_erisim/deneyler.css"> -->
+
+  <style>
+
+
+    body {
+      html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* background: linear-gradient(to bottom right, #f0f8ff, #a2d2ff, #0077b6); */
+  color: #222;
+
+}
+
+/* Sayfa ana alanı */
+.experiments {
+  min-height: 100vh; /* Tam ekran yüksekliği */
+  width: 100vw; /* Tam ekran genişliği */
+  padding: 0 32px 32px 32px; /* İç boşluk */
+  background: linear-gradient(to bottom right, #ffd4d4); 
+  box-sizing: border-box; /* Padding genişliğe dahil */
+  position: absolute; /* Ekrana sabitlenir */   
+  top: 0;         /* En üstte */
+  left: 0;/* Solda */
+}
+
+/* Sayfa başlığı */
+.experiments h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #081087, #2d56df, #00222a);
+  padding: 8px 24px;
+  border-radius: 12px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 1px 1px 3px rgba(249, 26, 26, 0.2);
+}
+
+/* Sınıf kutuları */
+.grade-section {
+  flex: 1;
+  min-width: 280px;
+  max-width: 320px;
+  margin: 10px;
+  background: linear-gradient(135deg, #081087, #2d56df, #00222a);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: #ffffff;
+}
+
+.grade-section h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Deney kartları */
+.experiment-card {
+  background-color: #ffffff;
+  border: 2px solid #0077b6;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.experiment-card:hover {
+  transform: translateY(-4px);
+  background-color: #ffffff;
+}
+
+.experiment-card h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #023e8a;
+}
+
+.experiment-card p {
+  font-size: 14px;
+  margin: 4px 0;
+  color: #333;
+}
+
+/* Sınıfları yatayda diz */
+.experiment-grid {
+  display: flex; /* Yatay dizim */
+  flex-wrap: wrap;  /* Satır taşmasına izin ver */  
+  justify-content: center; /* Ortala */
+  gap: 20px; /* Kartlar arası boşluk */
+}
+
+/* Mobil uyum */
+@media (max-width: 768px) {
+  .experiment-grid {
+    flex-direction: column; /* Sütun yönüne geçiş */
+    align-items: center;/* Ortala */
+  }
+}
+    }
+      
+  </style>
+</head>
+<body>
+
+  <section class="experiments">
+    <h2>🧪 Fen Deneyleri</h2>
+    <div class="experiment-grid">
+
+      <!-- 3. Sınıf -->
+      <div class="grade-section">
+        <h3>3. Sınıf</h3>
+        <div class="experiment-card">
+          <h4>Duyu Organları</h4>
+          <p>Deney: Tat alma testi</p>
+          <p>Malzemeler: Limon, şeker, pamuk</p>
+        </div>
+        <div class="experiment-card">
+          <h4>Maddenin Hâlleri</h4>
+          <p>Deney: Buzun erimesi ve buharlaşması</p>
+          <p>Malzemeler: Buz, bardak, ocak</p>
+        </div>
+      </div>
+
+      <!-- 4. Sınıf -->
+      <div class="grade-section">
+        <h3>4. Sınıf</h3>
+        <div class="experiment-card">
+          <h4>Kayaç ve Fosil Modeli</h4>
+          <p>Deney: Hamurla fosil izi</p>
+          <p>Malzemeler: Hamur, yaprak, taş</p>
+        </div>
+        <div class="experiment-card">
+          <h4>Işığın Yansıması</h4>
+          <p>Deney: Ayna ile ışık yönünü değiştir</p>
+          <p>Malzemeler: Ayna, lazer kalem, karton</p>
+        </div>
+      </div>
+      
+
+      <!-- 5. Sınıf -->
+      <div class="grade-section">
+        <h3>5. Sınıf</h3>
+        <div class="experiment-card">
+          <h4>Elektrik Devresi</h4>
+          <p>Deney: Ampulü yakmak için devre kur</p>
+          <p>Malzemeler: Pil, ampul, kablo, anahtar</p>
+        </div>
+        <div class="experiment-card">
+          <h4>Işık Geçirgenliği</h4>
+          <p>Deney: Şeffaf, yarı saydam ve opak cisimlerle ışık testi</p>
+          <p>Malzemeler: Cam, plastik, karton</p>
+        </div>
+      </div>
+
+      <!-- 6. Sınıf -->
+      <div class="grade-section">
+        <h3>6. Sınıf</h3>
+        <div class="experiment-card">
+          <h4>Gezegen Modeli</h4>
+          <p>Deney: Köpük toplarla Güneş sistemi maketi yap</p>
+          <p>Malzemeler: Köpük top, ip, karton</p>
+        </div>
+        <div class="experiment-card">
+          <h4>Elektriksel Direnç</h4>
+          <p>Deney: Farklı tellerle ampul parlaklığı karşılaştır</p>
+          <p>Malzemeler: Bakır tel, demir tel, ampul, pil</p>
+        </div>
+      </div>
+
+      <!-- 7. Sınıf -->
+      <div class="grade-section">
+        <h3>7. Sınıf</h3>
+        <div class="experiment-card">
+          <h4>Atom Modeli</h4>
+          <p>Deney: Boncuklarla atomun yapısını göster</p>
+          <p>Malzemeler: Renkli boncuk, tel, karton</p>
+        </div>
+        <div class="experiment-card">
+          <h4>Işığın Kırılması</h4>
+          <p>Deney: Su dolu bardakta kalem kırılması gözlemi</p>
+          <p>Malzemeler: Bardak, su, kalem</p>
+        </div>
+      </div>
+
+      <!-- 8. Sınıf -->
+      <div class="grade-section">
+        <h3>8. Sınıf</h3>
+        <div class="experiment-card">
+          <h4>Periyodik Sistem</h4>
+          <p>Deney: Element kartlarıyla tablo oluştur</p>
+          <p>Malzemeler: Renkli kart, mıknatıs, pano</p>
+        </div>
+        <div class="experiment-card">
+          <h4>Enerji Dönüşümü</h4>
+          <p>Deney: El çarkı ile elektrik üretimi</p>
+          <p>Malzemeler: Dinamo, LED, çark</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

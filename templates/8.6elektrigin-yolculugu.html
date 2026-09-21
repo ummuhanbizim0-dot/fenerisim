@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elektrik Devreleri ve Enerji Dönüşümü – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/8sinifkonu.css') }}">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Elektrik Devreleri ve Enerji Dönüşümü – İşaret Dili Video Kütüphanesi</h1>
+      <p>8. Sınıf Fen Bilimleri | Ampul bağlama şekilleri, elektrik akımı, ölçüm araçları ve enerji dönüşümleri işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Ampullerin Bağlanma Şekli</a>
+        <a href="#" class="chip">Elektrik Enerjisinin Dönüşmesi</a>
+        <a href="#" class="chip">Ohm Yasası</a>
+        <a href="#" class="chip">Seri ve Paralel Bağlama</a>
+        <a href="#" class="chip">Elektrik Akımı ve Gerilim</a>
+        <a href="#" class="chip">Ampermetre ve Voltmetre</a>
+        <a href="#" class="chip">Elektrik Enerjisi Santralleri</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb"><span class="badge">Ampullerin Bağlanma Şekli</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Seri ve Paralel Bağlama</h3>
+          <p class="card-meta">İşaret diliyle devre analizi • 6 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Ampullerin parlaklık farkı gözlemi</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Elektrik Enerjisinin Dönüşmesi</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Elektrik Enerjisinden Isı ve Işık</h3>
+          <p class="card-meta">İşaret diliyle enerji dönüşümü • 5 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Elektrik enerjisiyle çalışan cihazların incelenmesi</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Ohm Yasası</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Gerilim, Akım ve Direnç İlişkisi</h3>
+          <p class="card-meta">İşaret diliyle V = I × R • 6 dk</p>
+          <a class="btn" href="#video-3">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Direnç değişimiyle akım gözlemi</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Elektrik Akımı ve Gerilim</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Devrede Akım ve Gerilim</h3>
+          <p class="card-meta">İşaret diliyle elektriksel büyüklükler • 5 dk</p>
+          <a class="btn" href="#video-4">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Akım ve gerilim ölçümü</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Ampermetre ve Voltmetre</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Elektriksel Ölçüm Araçları</h3>
+          <p class="card-meta">İşaret diliyle ölçüm teknikleri • 5 dk</p>
+          <a class="btn" href="#video-5">Videoyu Aç</a>
+          <p class="experiment">🧪 Uygulama: Devreye ampermetre ve voltmetre bağlama</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Elektrik Enerjisi Santralleri</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Enerji Üretim Kaynakları</h3>
+          <p class="card-meta">İşaret diliyle santral türleri • 6 dk</p>
+          <a class="btn" href="#video-6">Videoyu Aç</a>
+          <p class="experiment">🧪 Poster: Hidroelektrik, termik, rüzgar ve güneş santrali karşılaştırması</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal örnekleri -->
+  <div id="video-1" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Seri ve Paralel Bağlama</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Ampullerin seri ve paralel bağlandığında devre davranışları ve parlaklık farkları işaret diliyle anlatılır.</p>
+    </div>
+  </div>
+
+  <!-- Diğer modallar benzer şekilde eklenebilir -->
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolarda arya ve kısa özet eklenmiştir, tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

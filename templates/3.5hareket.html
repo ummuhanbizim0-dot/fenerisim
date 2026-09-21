@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hareketi Keşfediyorum – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/3sinifkonu.css') }}">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Hareketi Keşfediyorum – İşaret Dili Video Kütüphanesi</h1>
+      <p>3. Sınıf Fen Bilimleri | Varlıkların hareketleri ve kuvvetin etkileri işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Varlıkların Hareketleri</a>
+        <a href="#" class="chip">Kuvvet ve Etkileri</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb"><span class="badge">Varlıkların Hareketleri</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Hareket Türleri</h3>
+          <p class="card-meta">İşaret diliyle hızlanma, yavaşlama, yön değiştirme • 5 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+          <p class="experiment">🧪 Etkinlik: Bahçede gözlem – top, bisiklet, salıncak</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Kuvvet ve Etkileri</span></div>
+        <div class="card-body">
+          <h3 class="card-title">İtme, Çekme ve Şekil Değişimi</h3>
+          <p class="card-meta">İşaret diliyle kuvvetin etkisi • 6 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Sünger, yay, oyun hamuru ile şekil değiştirme</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal örneği -->
+  <div id="video-1" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Hareket Türleri</h2>
+      <div class="player">
+        <iframe src="C:\Users\LENOVO\Desktop\wpkedi.mp4" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Varlıkların hızlanma, yavaşlama, yön değiştirme, dönme ve sallanma gibi hareket türleri gözlemle anlatılır.</p>
+    </div>
+  </div>
+
+  <!-- Diğer modallar benzer şekilde eklenebilir -->
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolarda arya ve kısa özet eklenmiştir, tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

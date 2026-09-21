@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">İletişim sayfası başlığı -->
+  <title>İletişim | FenErişim</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/iletisim.css') }}">
+  <style>
+  /* Giriş/Kayıt kapsayıcı */
+.auth-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+.contact-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 1000px;
+  margin: auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.intro {
+  color: #475569;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  text-align: left;
+}
+
+.contact-info {
+  background-color: #f1f5f9;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.contact-info h2 {
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8fafc;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.contact-form h2 {
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37,99,235,0.2);
+}
+
+.contact-form button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #1d4ed8;
+}
+
+.map-container {
+  margin-top: 40px;
+}
+
+.map-container h2 {
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+/* Reset ve temel ayarlar */
+* {
+  margin: 0; /* Tüm elementlerin dış boşluğunu sıfırla */
+  padding: 0; /* Tüm elementlerin iç boşluğunu sıfırla */
+  box-sizing: border-box; /* Padding ve border genişliğe dahil olsun */
+  color: #0c0856; /* 3333333Yazı rengi beyaz */
+  
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif; /* Yazı tipi */
+  /*background: url("/static/img/background.jpg") no-repeat center center fixed;*/ /* Arka plan görseli */
+  /*background-size: cover;*/ /* Görseli ekranı kaplayacak şekilde ölçekle */
+ /* color: #050c52; /* Varsayılan yazı rengi beyaz */
+  min-height: 100vh; /* Sayfa yüksekliği en az ekran kadar olsun */
+  display: flex; /* Flexbox düzeni */
+  flex-direction: column; /* Elemanları dikey sırala */
+}
+
+/* Arka planın okunabilirliği için yarı saydam katman */
+body::before {
+  content: "";
+  position: fixed; /* Ekrana sabitlenir */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*background: rgba(0, 0, 0, 0.35);*/ /* %35 siyah saydam katman */
+   background: linear-gradient(to bottom right, #db95fe, #ffffff,rgb(255, 255, 255), #619c98 ); /* degrade arka plan */
+/* Bej arka plan */
+  z-index: -1; /* İçeriklerin arkasında kalır */
+  backdrop-filter: blur(5px); /* Arka planı hafifçe bulanıklaştır */
+
+}
+
+/* Navbar */
+nav {
+  width: 100%; /* Tam genişlik */
+  height: 115px; /* Sabit yükseklik */
+  background-color: rgb(115, 4, 179); /* Mor ton */
+  backdrop-filter: blur(8px); /* Arkayı bulanıklaştır */
+  display: flex; /* Flex düzen */
+  justify-content: space-between; /* Logo sola, menü sağa */
+  align-items: center; /* Dikey ortalama */
+  padding: 0 30px; /* Yatay iç boşluk */
+  box-sizing: border-box; /* Padding genişliğe dahil */
+  position: fixed; /* Ekrana sabitlenir */
+  top: 0; /* En üstte */
+  left: 0;  /* Solda */
+  z-index: 1000; /* Üstte kalır */    
+}
+/*nav:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}*/
+
+nav h1 {
+  font-size: 35px; /* Logo yazı boyutu */
+  font-weight: bold; /* Kalın yazı */
+  /*color: #fff; /* Beyaz renk */
+  
+}
+
+nav ul {
+  list-style: none; /* Liste işaretlerini kaldır */
+  display: flex; /* Yatay menü */
+  gap: 7px; /* Menü elemanları arası boşluk */
+}
+
+nav ul li a {
+  color: #fff; /* Menü yazı rengi */
+  text-decoration: none; /* Alt çizgi yok */
+  font-weight: 500; /* Orta kalınlık */
+  font-size: 17px; /* Yazı boyutu */
+  transition: color 0.3s ease; /* Renk geçişi yumuşak */
+
+  /*transform: translateY(-5px);*/
+ /* transition: transform 0.3s ease;*/
+  transform: translateY(-4px) scale(1.07); /* Hafifçe yukarı ve büyüsün */
+  transition: color 0.3s, transform 0.3s;
+}
+
+
+nav ul li a:hover {
+  color: #ffe066; /* Sarımsı açık renk, mor arka planda rahatça görünür */
+  transform: translateY(-4px) scale(1.07); /* Hafifçe yukarı ve büyüsün */
+  transition: color 0.3s, transform 0.3s;
+}
+
+/* Hamburger ikon (başta gizli) */
+.menu-toggle {
+  display: none; /* Masaüstünde görünmez */
+  font-size: 28px; /* İkon boyutu */
+  cursor: pointer; /* Üzerine gelince el işareti */
+   color: #fff; /* Beyaz renk */
+}
+
+/* Mobil görünüm ayarları */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Küçük ekranda göster */
+  }
+
+  nav ul {
+    display: none; /* Menü başta gizli */
+    flex-direction: column; /* Alt alta diz */
+    gap: 15px; /* Elemanlar arası boşluk */
+    align-items: center; /* Ortala */
+    padding: 10px 0; /* İç boşluk */
+    background-color: rgb(115, 4, 179); /* Mor ton */
+    position: absolute; /* Navbar'ın altında konumlanır */
+    top: 80px; /* Navbar yüksekliği kadar aşağı */
+    left: 0;
+    width: 100%; /* Tam genişlik */
+  }
+
+  nav ul.active {
+    display: flex; /* JS ile açıldığında görünür */
+  }
+}
+
+.logo {
+  margin-top: 0px; /* Alt boşluk */
+  margin-bottom: 0px; /* Üst boşluk */
+  width: 125px;       /* Genişlik */
+  height: 111px;      /* Yükseklik */
+  border-radius: 27%; /* Tam yuvarlak yapar */
+  object-fit:cover;  /* Görseli kırpmadan ortalar */
+  /*border: 3px solid #fff; /* Beyaz çerçeve (isteğe bağlı) */
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.logo-text {
+  font-size: 40px;
+  color: #fff;
+  font-weight: bold;
+  white-space: nowrap;        /* Tek satırda kalsın */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    height: auto;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(90, 0, 140);
+    padding: 10px 0;
+    position: static; /* Absolute değil! */
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+.nav-links {
+  display: none; /* Başta gizli */
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: rgb(90, 0, 140);
+  padding: 15px 0;
+  z-index: 10;
+}
+
+.nav-links.active {
+  display: flex; /* JS ile açıldığında görünür */
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 0;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  width: 310px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.search-input::placeholder {
+  color: #eee;
+}
+
+.search-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  /*color: rgb(90, 0, 140);*/
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #f0f098;
+}
+/*
+.grade-header {
+  text-align: center;
+  background: linear-gradient(to right, #6a00a3, #9c27b0);
+  padding: 40px 20px;
+  border-radius: 16px;
+  color: #fff;
+  margin: 30px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.grade-header h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.grade-header p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+
+/* Header */
+header {
+  text-align: center; /* Ortala */
+  background: rgba(206, 202, 224, 0.475); /* Yarı saydam mor kutu */
+  padding: 40px 20px; /* İç boşluk */
+  border-radius: 12px; /* Köşeleri yuvarlat */
+  display: inline-block; /* İçeriğe göre genişlik */
+  margin: 40px auto 0; /* Ortala ve üstten boşluk */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Hafif gölge */
+}
+
+header h2 {
+  font-size: 48px; /* Başlık boyutu */
+  margin-bottom: 10px; /* Alt boşluk */
+  text-shadow: 1px 1px 4px rgb(221, 164, 19); /* Hafif gölge */
+}
+
+header p {
+  font-size: 20px; /* Alt yazı boyutu */
+  opacity: 0.9; /* Hafif saydam */
+}
+
+/* Sınıf butonları */
+.class-buttons {
+  display: flex; /* Yatay/dikey düzen */
+  justify-content: center; /* Ortala */
+  flex-wrap: wrap; /* Taşarsa alt satıra geç */
+  gap: 50px; /* Butonlar arası boşluk */
+  padding: 40px 20px; /* İç boşluk */
+}
+
+.class-buttons a {
+  background: rgba(255, 255, 255, 0.1); /* Yarı saydam beyaz */
+  /*color: #ffffff; /* Yazı rengi */
+  text-decoration: none; /* Alt çizgi yok */
+  padding: 20px 40px; /* İç boşluk */
+  border-radius: 12px; /* Köşeleri yuvarlat */
+  font-size: 18px; /* Yazı boyutu */
+  font-weight: bold; /* Kalın yazı */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Hover geçişleri */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Hafif gölge */
+  backdrop-filter: blur(6px); /* Arka planı bulanıklaştır */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Hafif gölge */
+}
+
+.class-buttons a:hover {
+  background-color: #3d36cc; /* Üzerine gelince mavi ton */
+  color: #fff !important; /* Yazı rengi beyaz */
+  transform: translateY(-5px); /* Hafif yukarı kalkar */
+}
+
+
+/* Hızlı erişim kartları */
+.quick-access {
+  display: flex; /* Yatay düzen */
+  justify-content: center; /* Ortala */
+  gap: 17px; /* Kartlar arası boşluk */
+  margin: 40px auto; /* Ortala ve dikey boşluk */
+  flex-wrap: wrap; /* Taşarsa alt satıra geç */
+}
+
+.qa-card {
+  background: rgba(255,255,255,0.1); /* Yarı saydam beyaz */
+  padding: 20px; /* İç boşluk */
+  border-radius: 12px; /* Köşeleri yuvarlat */
+  text-align: center; /* Ortala */
+  width: 200px; /* Kart genişliği */
+  text-decoration: none; /* Alt çizgi yok */
+  /*color: #ffffff; /* Yazı rengi */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Hover geçişleri */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Hafif gölge */
+  backdrop-filter: blur(6px); /* Arka planı bulanıklaştır */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.0); /* Hafif gölge */
+}
+
+.qa-card:hover {
+  background-color: #3d36cc; /* Üzerine gelince beyaz */
+  color: #fff; /* Yazı rengi beyaz */
+  transform: translateY(-5px); /* Hafif yukarı kalkar */
+}
+/*
+.qa-card a,
+.qa-card a:visited {
+  color: inherit;
+}
+
+.qa-card:hover a {
+  color: #fff; /* Hoverdayken linkler de beyaz 
+}
+*/
+
+.qa-card .icon {
+  font-size: 40px; /* İkon boyutu */
+  display: block; /* Alt satıra geç */
+  margin-bottom: 10px; /* Alt boşluk */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+/* Footer */
+footer {
+  background-color: rgb(115, 4, 179); /* Mor ton */
+  backdrop-filter: blur(8px); /* Blur efekti */
+  padding: 10px; /* İç boşluk */
+  text-align: center; /* Ortala */
+  font-size: 14px; /* Yazı boyutu */
+  margin-top: auto; /* Sayfanın en altına it */
+ /* color: #fff; /* Yazı rengi */
+}
+
+
+/* Sekme butonları */
+.tab-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 0.5rem;
+  cursor: pointer;
+  background: #eee;
+  border: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.tab-btn.active {
+  background: #ddd;
+}
+
+/* Sekme içerikleri */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Form elemanları */
+form label {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+  </style>
+</head>
+<body>
+  <br><br>
+  <br><br>
+  <section class="contact-section">
+    <div class="contact-container">
+      <h1>Bizimle İletişime Geçin 🤝</h1>
+      <p class="intro">
+        FenErişim ekibi olarak her türlü soru, öneri veya iş birliği talebiniz için buradayız.  
+        İşaret diliyle fen eğitimi hakkında paylaşmak istediğiniz fikirleri duymaktan mutluluk duyarız 💡
+      </p>
+
+      <div class="contact-grid">
+        <!-- İletişim Bilgileri -->
+        <div class="contact-info">
+          <h2>İletişim Bilgileri</h2>
+          <p><strong>E-posta:</strong> info@fenerisim.org</p>
+          <p><strong>Telefon:</strong> +90 555 55 55 5</p>
+          <p><strong>Adres:</strong> FenErişim Ofisi, Ankara Üniversitesi Teknopark, Ankara</p>
+          <p><strong>Çalışma Saatleri:</strong> Hafta içi 09:00 - 17:00</p>
+        </div>
+
+        <!-- İletişim Formu -->
+        <form class="contact-form">
+          <h2>Bize Mesaj Gönder 📬</h2>
+          <input type="text" placeholder="Adınız Soyadınız" required>
+          <input type="email" placeholder="E-posta Adresiniz" required>
+          <textarea placeholder="Mesajınız..." rows="5" required></textarea>
+          <button type="submit">Gönder</button>
+        </form>
+      </div>
+
+      <!-- Harita Alanı -->
+      <div class="map-container">
+        <h2>Konumumuz</h2>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068.9129819199425!2d32.78083077589417!3d39.870214671531554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34d165ddccfa5%3A0x5c1c9cc2a21e1d25!2sAnkara%20%C3%9Cniversitesi%20Teknokent!5e0!3m2!1str!2str!4v1697825591101!5m2!1str!2str"
+          width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+  
+ <nav>
+  <div class="logo-container">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="FenErişim Logo" class="logo">
+    <span class="logo-text" style="cursor:pointer;">FenErişim</span>
+  </div>
+
+  <div class="search-container">
+    <input type="text" placeholder="Ara..." class="search-input">
+    <button type="submit" class="search-button">🔍</button>
+  </div> 
+
+  <div class="menu-toggle">☰</div>
+
+  <!-- Menü linkleri UL içinde olmalı -->
+  <ul>
+    <li><a href="/">Ana Sayfa</a></li>
+    <li><a href="/hakkinda">Hakkımızda</a></li>
+    <li><a href="/iletisim">İletişim</a></li>
+    <li><a href="/blog-haberler">Blog/Haberler</a></li>
+    <li><a href="#auth-section" data-tab="login">Giriş Yap</a></li>
+    <li><a href="#auth-section" data-tab="register">Kayıt Ol</a></li>
+  </ul>
+</nav>
+
+<div id="auth-section" class="auth-container" style="display: none;">
+  <div class="tab-buttons">
+    <button class="tab-btn active" data-tab="login">Giriş Yap</button>
+    <button class="tab-btn" data-tab="register">Kayıt Ol</button>
+  </div>
+
+  <div id="login" class="tab-content active">
+    <h2>Giriş Yap</h2>
+    <form method="post" action="/login">
+      <label for="login-email">E-posta:</label>
+      <input type="email" id="login-email" name="email" required />
+      <label for="login-password">Şifre:</label>
+      <input type="password" id="login-password" name="password" required />
+      <button type="submit">Giriş Yap</button>
+    </form>
+  </div>
+
+  <div id="register" class="tab-content">
+    <h2>Kayıt Ol</h2>
+    <form method="post" action="/register">
+      <label for="name">Ad Soyad:</label>
+      <input type="text" id="name" name="name" required />
+      <label for="register-email">E-posta:</label>
+      <input type="email" id="register-email" name="email" required />
+      <label for="register-password">Şifre:</label>
+      <input type="password" id="register-password" name="password" required />
+      <label for="role">Kullanıcı Türü:</label>
+      <select id="role" name="role">
+        <option value="öğrenci">Öğrenci</option>
+        <option value="öğretmen">Öğretmen</option>
+        <option value="veli">Veli</option>
+      </select>
+      <button type="submit">Kayıt Ol</button>
+    </form>
+  </div>
+</div>
+
+<!--JS GİRİŞ YAP KAYIT OL-->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Tüm giriş/kayıt bağlantılarını dinle
+    document.querySelectorAll('a[href="#auth-section"]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const tab = this.dataset.tab;
+        document.getElementById('auth-section').style.display = 'block';
+        activateTab(tab);
+        window.scrollTo({ top: document.getElementById('auth-section').offsetTop, behavior: 'smooth' });
+      });
+    });
+
+    // Sekme geçiş fonksiyonu
+    function activateTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.tab === tabId);
+      });
+
+      document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.toggle('active', content.id === tabId);
+      });
+    }
+
+    // Sekme butonlarına tıklama
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        activateTab(btn.dataset.tab);
+      });
+    });
+  });
+</script>
+  <footer>
+    <p style="font-size: 14px; margin-top: 20px; color: #ffffff;">© 2025 FenErişim | Erişilebilir Bilim Eğitimi</p>
+ <br>
+  </footer>
+</body>
+</html>

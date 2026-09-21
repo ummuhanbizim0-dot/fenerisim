@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maddenin Doğası – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/7sinifkonu.css') }}">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Maddenin Doğası – İşaret Dili Video Kütüphanesi</h1>
+      <p>7. Sınıf Fen Bilimleri | Atom yapısı, saf madde, karışım ve ayırma yöntemleri işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Maddenin Tanecikli Yapısı</a>
+        <a href="#" class="chip">Saf Maddeler</a>
+        <a href="#" class="chip">Karışımlar</a>
+        <a href="#" class="chip">Karışımların Ayrılması</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb"><span class="badge">Maddenin Tanecikli Yapısı</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Atomun Yapısı ve Parçacıkları</h3>
+          <p class="card-meta">İşaret diliyle atom modeli • 6 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+          <p class="experiment">🧪 Etkinlik: Proton, nötron ve elektron modellemesi</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Saf Maddeler</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Element ve Bileşikler</h3>
+          <p class="card-meta">İşaret diliyle saf madde sınıflandırması • 5 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+          <p class="experiment">🧪 Etkinlik: Günlük yaşamdan element ve bileşik örnekleri</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Karışımlar</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Homojen ve Heterojen Karışımlar</h3>
+          <p class="card-meta">İşaret diliyle karışım türleri • 5 dk</p>
+          <a class="btn" href="#video-3">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Tuz-su ve kum-su karışımı gözlemi</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Karışımların Ayrılması</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Fiziksel Ayırma Yöntemleri</h3>
+          <p class="card-meta">İşaret diliyle ayırma teknikleri • 6 dk</p>
+          <a class="btn" href="#video-4">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Buharlaştırma, süzme, mıknatısla ayırma</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal örnekleri -->
+  <div id="video-1" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Atomun Yapısı ve Parçacıkları</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Atomun proton, nötron ve elektronlardan oluşan yapısı işaret diliyle anlatılır.</p>
+    </div>
+  </div>
+
+  <!-- Diğer modallar benzer şekilde eklenebilir -->
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolarda arya ve kısa özet eklenmiştir, tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

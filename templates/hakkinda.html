@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hakkında | FenErişim</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/hakkinda.css') }}">
+
+  <style>
+  /* Giriş/Kayıt kapsayıcı */
+.auth-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Sekme butonları */
+.tab-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 0.5rem;
+  cursor: pointer;
+  background: #eee;
+  border: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.tab-btn.active {
+  background: #ddd;
+}
+
+/* Sekme içerikleri */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Form elemanları */
+form label {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+.about-section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-container h1 {
+  font-size: 2.2rem;
+  color: #0f172a;
+  margin-bottom: 15px;
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.about-mission, .about-team {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  margin-top: 25px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.about-mission h2, .about-team h2 {
+  color: #2563eb;
+}
+
+/* Reset ve temel ayarlar */
+* {
+  margin: 0; /* Tüm elementlerin dış boşluğunu sıfırla */
+  padding: 0; /* Tüm elementlerin iç boşluğunu sıfırla */
+  box-sizing: border-box; /* Padding ve border genişliğe dahil olsun */
+  color: #0c0856; /* 3333333Yazı rengi beyaz */
+  
+}
+
+
+form button:hover {
+  background-color: #45a049;
+}
+  </style>
+</head>
+<body>
+  <br><br>
+  <br><br>
+  <br ><br>
+  <section class="about-section">
+    <div class="about-container">
+      <h1>FenErişim’e Hoş Geldiniz 👋</h1>
+      <p>
+        FenErişim, fen eğitiminin herkes için erişilebilir olmasını hedefleyen bir öğrenme platformudur. 
+        İşitme engelli öğrenciler için <strong>Türk İşaret Dili</strong> destekli fen içerikleri geliştiriyoruz.  
+        Bilim, herkesin anlayabileceği bir dille anlatıldığında <em>gerçek anlamda evrensel</em> olur.
+      </p>
+
+      <p>
+        Platformumuzda yer alan materyaller; <strong>görsel deney videoları</strong>, 
+        <strong>etkileşimli işaret dili anlatımları</strong> ve 
+        <strong>öğretmen rehberleri</strong> gibi kaynaklardan oluşur.  
+        Amacımız, fen öğrenimini hem eğlenceli hem de kapsayıcı hale getirmek 🌿
+      </p>
+
+      <div class="about-mission">
+        <h2>Misyonumuz 🎯</h2>
+        <p>
+          FenErişim, engelleri kaldırarak bilimin ışığını herkese ulaştırsmak için var.  
+          Her öğrenci, kendi dilinde öğrenme hakkına sahiptir — ister sesle, ister işaretle, ister görselle.
+        </p>
+      </div>
+
+      <div class="about-team">
+        <h2>Ekibimiz 👩‍🏫👨‍💻</h2>
+        <p>
+          FenErişim ekibi; fen bilgisi öğretmenleri, işaret dili tercümanları ve 
+          eğitim teknolojisi uzmanlarından oluşmaktadır.  
+          Birlikte, fenin herkes için erişilebilir olduğu bir dünya inşa ediyoruz.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <nav>
+  <div class="logo-container">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="FenErişim Logo" class="logo">
+    <span class="logo-text" style="cursor:pointer;">FenErişim</span>
+  </div>
+
+  <div class="search-container">
+    <input type="text" placeholder="Ara..." class="search-input">
+    <button type="submit" class="search-button">🔍</button>
+  </div> 
+
+  <div class="menu-toggle">☰</div>
+
+  <!-- Menü linkleri UL içinde olmalı -->
+  <ul>
+    <li><a href="/">Ana Sayfa</a></li>
+    <li><a href="/hakkinda">Hakkımızda</a></li>
+    <li><a href="/iletisim">İletişim</a></li>
+    <li><a href="/blog-haberler">Blog/Haberler</a></li>
+    <li><a href="#auth-section" data-tab="login">Giriş Yap</a></li>
+    <li><a href="#auth-section" data-tab="register">Kayıt Ol</a></li>
+  </ul>
+</nav>
+
+<div id="auth-section" class="auth-container" style="display: none;">
+  <div class="tab-buttons">
+    <button class="tab-btn active" data-tab="login">Giriş Yap</button>
+    <button class="tab-btn" data-tab="register">Kayıt Ol</button>
+  </div>
+
+  <div id="login" class="tab-content active">
+    <h2>Giriş Yap</h2>
+    <form method="post" action="/login">
+      <label for="login-email">E-posta:</label>
+      <input type="email" id="login-email" name="email" required />
+      <label for="login-password">Şifre:</label>
+      <input type="password" id="login-password" name="password" required />
+      <button type="submit">Giriş Yap</button>
+    </form>
+  </div>
+
+  <div id="register" class="tab-content">
+    <h2>Kayıt Ol</h2>
+    <form method="post" action="/register">
+      <label for="name">Ad Soyad:</label>
+      <input type="text" id="name" name="name" required />
+      <label for="register-email">E-posta:</label>
+      <input type="email" id="register-email" name="email" required />
+      <label for="register-password">Şifre:</label>
+      <input type="password" id="register-password" name="password" required />
+      <label for="role">Kullanıcı Türü:</label>
+      <select id="role" name="role">
+        <option value="öğrenci">Öğrenci</option>
+        <option value="öğretmen">Öğretmen</option>
+        <option value="veli">Veli</option>
+      </select>
+      <button type="submit">Kayıt Ol</button>
+    </form>
+  </div>
+</div>
+
+<!-- JS GİRİŞ YAP / KAYIT OL -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Tüm giriş/kayıt bağlantılarını dinle
+    document.querySelectorAll('a[href="#auth-section"]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const tab = this.dataset.tab;
+        document.getElementById('auth-section').style.display = 'block';
+        activateTab(tab);
+        window.scrollTo({ 
+          top: document.getElementById('auth-section').offsetTop, 
+          behavior: 'smooth' 
+        });
+      });
+    });
+  });
+
+  // Sekme geçiş fonksiyonu
+  function activateTab(tabId) {
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.tab === tabId);
+    });
+
+    document.querySelectorAll('.tab-content').forEach(content => {
+      content.classList.toggle('active', content.id === tabId);
+    });
+  }
+
+  // Sekme butonlarına tıklama
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activateTab(btn.dataset.tab);
+    });
+  });
+</script>
+  <footer>
+    <p style="font-size: 14px; margin-top: 20px; color: #ffffff;">© 2025 FenErişim | Erişilebilir Bilim Eğitimi</p>
+ <br>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,221 @@
+/* Arka plan ve genel yapı */
+body {
+  /*background: linear-gradient(to bottom right, #279325, #a4cd1d);*/
+ background: linear-gradient(to bottom right, #cb9623, #428eb1);
+
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.grade-page {
+/*  background: rgba(0, 0, 0, 0.2);*/ /* saydam siyah */
+  background: rgba(255, 255, 255, 0.85); /* saydam beyaz */
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 1200px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Hafif gölge */
+
+}
+
+/* Sayfa başlığı */
+.grade-header {
+  text-align: center;
+background: linear-gradient(to right, #476691, #b07727);
+  /*background: linear-gradient(to right, #4fa300, #3cb027);*/
+  padding: 40px 20px;
+  border-radius: 16px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Yazıya Hafif gölge */
+}
+
+.grade-header h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.grade-header p {
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+/* Konu kartları */
+.topics h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+    color: #192c76;
+
+}
+
+.topic-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.topic-card {
+    padding: 20px 25px;
+  border-radius: 12px;
+  width: 280px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background: rgba(11, 22, 52, 0.603); /* saydam siyah */
+}
+
+.topic-card a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+}
+.topic-card .meta {
+  font-size: 13px;
+  color: #ddd;
+  opacity: 0.85;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.video-link {
+  font-size: 12px;
+  color: #040766;
+  text-decoration: underline;
+  display: block;
+}
+
+.topic-card:hover {
+  background-color: #fff;
+  color: #6a00a3;
+  transform: translateY(-5px);
+}
+
+.topic-card:hover a {
+  color: #6a00a3;
+}
+
+.topic-card:hover .meta {
+  color: #444;
+}
+
+.topic-card:hover .video-link {
+  color: #9c27b0;
+}
+.videos h3 {
+  font-size: 24px;
+  margin: 40px 0 20px;
+  text-align: center;
+    color: #192c76;
+
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.video-card {
+  background: rgba(11, 22, 52, 0.603); /* saydam siyah */
+  padding : 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.video-card iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  border: none;
+}
+
+.video-card p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  background-color: #fff;
+}
+
+.video-card:hover p {
+  color: #6a00a3;
+}
+/* Kaynaklar */
+.resources h3 {
+  font-size: 24px;
+  margin: 40px 0 15px;
+  text-align: center;
+    color: #192c76;
+
+}
+
+.resources ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  
+}
+
+.resources li a {
+  background: rgba(255,255,255,0.1);
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+    background: rgba(11, 22, 52, 0.603); /* saydam siyah */
+
+}
+
+.resources li a:hover {
+  background-color: #fff;
+  color: #6a00a3;
+  transform: translateY(-4px);
+}
+/*deneyler */
+.experiments h3 {
+  font-size: 24px;
+  margin: 40px 0 15px;
+  text-align: center;
+    color: #192c76;
+
+}
+
+.experiment-card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(11, 22, 52, 0.603); /* saydam siyah */
+  max-width: 600px;
+  margin: 0 auto 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.experiment-card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.experiment-card a {
+  color: #68dada;
+  text-decoration: underline;
+}

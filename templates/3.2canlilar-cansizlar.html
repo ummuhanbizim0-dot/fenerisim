@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+   <link rel="stylesheet" href="url_for('static', filename='css/3sinifkonu.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>İşaret Dili Video Kütüphanesi</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/3sinifkonu.css') }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Canlılar Dünyası - İşaret Dili Video Kütüphanesi</h1>
+      <p>3. Sınıf Fen Bilimleri konularını işaret diliyle ve anlaşılır anlatımlarla keşfet.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Canlılar</a>
+        <a href="#" class="chip">Duyular</a>
+        <a href="#" class="chip">Madde</a>
+        <a href="#" class="chip">Kuvvet ve Hareket</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <!-- Kart 1 -->
+      <article class="card">
+        <div class="thumb" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1523246191815-32004676c9bb?q=80&w=1200&auto=format&fit=crop" alt="" />
+          <span class="badge">Konu: Madde</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Maddeyi Niteleyen Özellikler</h3>
+          <p class="card-meta">İşaret diliyle temel kavramlar • 7 dk</p>
+          <!-- Modal'ı açan bağlantı: :target ile çalışır -->
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <!-- Kart 2 -->
+      <article class="card">
+        <div class="thumb" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop" alt="" />
+          <span class="badge">Konu: Dünya ve Evren</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Dünya'nın Yapısı</h3>
+          <p class="card-meta">İşaret diliyle katmanlar • 6 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <!-- Kart 3 -->
+      <article class="card">
+        <div class="thumb" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=1200&auto=format&fit=crop" alt="" />
+          <span class="badge">Konu: Duyular</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Duyu Organlarımız</h3>
+          <p class="card-meta">İşaret diliyle görevler • 5 dk</p>
+          <a class="btn" href="#video-3">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <!-- Kart 4 -->
+      <article class="card">
+        <div class="thumb" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?q=80&w=1200&auto=format&fit=crop" alt="" />
+          <span class="badge">Konu: Kuvvet</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Kuvvet ve Hareket</h3>
+          <p class="card-meta">İşaret diliyle itme-çekme • 8 dk</p>
+          <a class="btn" href="#video-4">Videoyu Aç</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolara altyazı ve kısa özet eklenmiştir. Tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+
+  <!-- CSS-Only Modal'lar (YouTube embed URL'lerini burada değiştir) -->
+  <div id="video-1" class="modal" aria-labelledby="title-1" aria-modal="true" role="dialog">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close" aria-label="Kapat">×</a>
+      <h2 id="title-1" class="modal-title">Maddeyi Niteleyen Özellikler</h2>
+      <div class="player">
+        <!-- Buradaki src'yi kendi videonla değiştir -->
+        <iframe src="https://www.youtube.com/embed/ksvCKJp96YY" title="Maddeyi Niteleyen Özellikler" allowfullscreen></iframe>
+      </div>
+      <div class="meta">
+        <p class="pill">Altyazı var</p>
+        <p class="pill">İşaret dili</p>
+      </div>
+      <p class="desc">Renk, koku ve sertlik gibi özelliklerin gündelik örneklerle açıklaması.</p>
+    </div>
+  </div>
+
+  <div id="video-2" class="modal" aria-labelledby="title-2" aria-modal="true" role="dialog">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close" aria-label="Kapat">×</a>
+      <h2 id="title-2" class="modal-title">Dünya'nın Yapısı</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/4tKdIA2_0xE" title="Dünya'nın Yapısı" allowfullscreen></iframe>
+      </div>
+      <div class="meta">
+        <p class="pill">Altyazı var</p>
+        <p class="pill">İşaret dili</p>
+      </div>
+      <p class="desc">Yer kabuğu, manto ve çekirdek katmanlarının görsel anlatımı.</p>
+    </div>
+  </div>
+
+  <div id="video-3" class="modal" aria-labelledby="title-3" aria-modal="true" role="dialog">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close" aria-label="Kapat">×</a>
+      <h2 id="title-3" class="modal-title">Duyu Organlarımız</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YZgZHk2PN_8" title="Duyu Organlarımız" allowfullscreen></iframe>
+      </div>
+      <div class="meta">
+        <p class="pill">Altyazı var</p>
+        <p class="pill">İşaret dili</p>
+      </div>
+      <p class="desc">Görme, işitme, tat, koku ve dokunma duyularının görevleri.</p>
+    </div>
+  </div>
+
+  <div id="video-4" class="modal" aria-labelledby="title-4" aria-modal="true" role="dialog">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close" aria-label="Kapat">×</a>
+      <h2 id="title-4" class="modal-title">Kuvvet ve Hareket</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/zCHUeRp8RYo" title="Kuvvet ve Hareket" allowfullscreen></iframe>
+      </div>
+      <div class="meta">
+        <p class="pill">Altyazı var</p>
+        <p class="pill">İşaret dili</p>
+      </div>
+      <p class="desc">İtme-çekme kavramları ve günlük hayattan örnekler.</p>
+    </div>
+  </div>
+</body>
+</html>

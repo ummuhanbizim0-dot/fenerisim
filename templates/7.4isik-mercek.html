@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Işık ve Görme – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/7sinifkonu.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Işık ve Görme – İşaret Dili Video Kütüphanesi</h1>
+      <p>7. Sınıf Fen Bilimleri | Işığın yayılması, yansıma, kırılma ve görme olayları işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Işığın Yayılması</a>
+        <a href="#" class="chip">Yansıma</a>
+        <a href="#" class="chip">Kırılma</a>
+        <a href="#" class="chip">Görme Olayı</a>
+        <a href="#" class="chip">Işık Kirliliği</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1581090700227-1e7e8e3d7d5a?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Işığın Yayılması</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Işığın Doğrusal Yayılması</h3>
+          <p class="card-meta">İşaret diliyle ışık yolu • 5 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1616401789420-3b3b3b3b3b3b?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Yansıma</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Yansıma ve Düzlem Ayna</h3>
+          <p class="card-meta">İşaret diliyle yansıma kuralları • 6 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1588776814546-ec7b5f1e1e2c?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Kırılma</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Kırılma ve Mercekler</h3>
+          <p class="card-meta">İşaret diliyle ışığın yön değiştirmesi • 7 dk</p>
+          <a class="btn" href="#video-3">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1505575972945-338c3fdde642?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Görme Olayı</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Göz Yapısı ve Görme Mekanizması</h3>
+          <p class="card-meta">İşaret diliyle göz sağlığı • 6 dk</p>
+          <a class="btn" href="#video-4">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Işık Kirliliği</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Işık Kirliliği ve Korunma</h3>
+          <p class="card-meta">İşaret diliyle çevresel etkiler • 5 dk</p>
+          <a class="btn" href="#video-5">Videoyu Aç</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolara altyazı ve kısa özet eklenmiştir. Tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+
+  <!-- Modal pencereler buraya entegre edilebilir -->
+   <!-- Kartlar zaten yukarıda tanımlanmıştı, şimdi modal pencereleri ekliyoruz -->
+
+<!-- Modal 1: Işığın Yayılması -->
+<div id="video-1" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Işığın Doğrusal Yayılması</h2>
+    <div class="player">
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" allowfullscreen></iframe>
+    </div>
+    <div class="meta">
+      <p class="pill">Altyazı var</p>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Işığın doğrusal yayılma özelliği, gölge oluşumu ve ışık yolu örneklerle anlatılır.</p>
+  </div>
+</div>
+
+<!-- Modal 2: Yansıma -->
+<div id="video-2" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Yansıma ve Düzlem Ayna</h2>
+    <div class="player">
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" allowfullscreen></iframe>
+    </div>
+    <div class="meta">
+      <p class="pill">Altyazı var</p>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Yansıma kuralları, düzlem aynada görüntü oluşumu ve günlük yaşamdan örneklerle açıklanır.</p>
+  </div>
+</div>
+
+<!-- Modal 3: Kırılma -->
+<div id="video-3" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Kırılma ve Mercekler</h2>
+    <div class="player">
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" allowfullscreen></iframe>
+    </div>
+    <div class="meta">
+      <p class="pill">Altyazı var</p>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Işığın ortam değiştirirken yön değiştirmesi, mercek türleri ve uygulamaları anlatılır.</p>
+  </div>
+</div>
+
+<!-- Modal 4: Görme Olayı -->
+<div id="video-4" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Göz Yapısı ve Görme Mekanizması</h2>
+    <div class="player">
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_4" allowfullscreen></iframe>
+    </div>
+    <div class="meta">
+      <p class="pill">Altyazı var</p>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Gözün yapısı, ışığın retina üzerindeki etkisi ve görme süreci işaret diliyle açıklanır.</p>
+  </div>
+</div>
+
+<!-- Modal 5: Işık Kirliliği -->
+<div id="video-5" class="modal">
+  <div class="modal-dialog">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Işık Kirliliği ve Korunma</h2>
+    <div class="player">
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_5" allowfullscreen></iframe>
+    </div>
+    <div class="meta">
+      <p class="pill">Altyazı var</p>
+      <p class="pill">İşaret dili</p>
+    </div>
+    <p class="desc">Işık kirliliğinin çevresel etkileri, gökyüzü gözlemi ve korunma yolları anlatılır.</p>
+  </div>
+</div>
+</body>
+</html>

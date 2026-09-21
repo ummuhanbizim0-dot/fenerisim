@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elektrik Devreleri – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/5sinifkonu.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Elektrik Devreleri – İşaret Dili Video Kütüphanesi</h1>
+      <p>5. Sınıf Fen Bilimleri | Devre elemanları, devre şemaları ve elektrik güvenliği işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Devre Elemanları</a>
+        <a href="#" class="chip">Devre Kurulumu</a>
+        <a href="#" class="chip">Elektrik Güvenliği</a>
+        <a href="#" class="chip">Devre Şeması</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1581091870622-1e7e8e3d7d5a?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Devre Elemanları</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Ampul, Pil ve Anahtar</h3>
+          <p class="card-meta">İşaret diliyle devre elemanları • 5 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1581090700227-1e7e8e3d7d5a?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Devre Kurulumu</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Basit Elektrik Devresi Kurulumu</h3>
+          <p class="card-meta">İşaret diliyle devre bağlantısı • 6 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1581090700227-1e7e8e3d7d5a?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Elektrik Güvenliği</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Elektrik Kullanımında Güvenlik</h3>
+          <p class="card-meta">İşaret diliyle güvenlik kuralları • 7 dk</p>
+          <a class="btn" href="#video-3">Videoyu Aç</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1581090700227-1e7e8e3d7d5a?q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="badge">Konu: Devre Şeması</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Devre Şeması Okuma ve Çizme</h3>
+          <p class="card-meta">İşaret diliyle devre gösterimi • 5 dk</p>
+          <a class="btn" href="#video-4">Videoyu Aç</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolara altyazı ve kısa özet eklenmiştir. Tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+
+  <!-- Modal pencereler -->
+  <div id="video-1" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Ampul, Pil ve Anahtar</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+      </div>
+      <div class="meta">
+        <p class="pill">Altyazı var</p>
+        <p class="pill">İşaret dili</p>
+      </div>
+      <p class="desc">Devre elemanlarının görevleri ve sembolleri işaret diliyle anlatılır.</p>
+    </div>
+  </div>
+
+  <div id="video-2" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Basit Elektrik Devresi Kurulumu</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+      </div>
+      <div class="meta">
+        <p class="pill">Altyazı var</p>
+        <p class="pill">İşaret dili</p>
+      </div>
+      <p class="desc">Pil, ampul ve kablolarla devre kurma adımları görsellerle açıklanır.</p>
+    </div>
+  </div>
+
+  <div id="video-3" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Elektrik Kullanımında Güvenlik</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+      </div>
+      <div class="meta">
+        <p class="pill">Altyazı var</p>
+        <p class="pill">İşaret dili</p>
+      </div>
+      <p class="desc">Elektrik çarpmasına karşı alınacak önlemler ve güvenli kullanım kuralları.</p>
+    </div>
+  </div>
+
+  <div id="video-4" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Devre Şeması Okuma ve Çizme</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+      </div>
+      <div class="meta">
+        <p class="pill">Altyazı var</p>
+        <p class="pill">İşaret dili</p>
+      </div>
+      <p class="desc">Devre elemanlarının sembollerle gösterimi ve şema çizimi örneklerle anlatılır.</p>
+    </div>
+  </div>
+</body>
+</html>

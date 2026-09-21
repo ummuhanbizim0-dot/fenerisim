@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> FenErişim I Herkes İçin Eğitim</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+ .ai-container {
+      position: fixed;
+      left: 20px;
+      top: 37%;
+      transform: translateY(-50%);
+      z-index: 999;
+    }
+
+    #aiTrigger {
+      background-color: #844ae2;
+      color: white;
+      font-size: 20px;
+      padding: 16px 24px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    #aiTrigger:hover {
+      background-color: #357ABD;
+      transform: scale(1.05);
+    }
+
+    #aiPanel {
+      margin-top: 20px;
+      background-color: #f9f9f9;
+      padding: 16px;
+      border-radius: 12px;
+      width: 300px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #userQuestion {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    #sendQuestion {
+      background-color: #4A90E2;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #sendQuestion:hover {
+      background-color: #357ABD;
+    }
+
+    #aiAnswer {
+      margin-top: 12px;
+      font-size: 15px;
+      color: #333;
+    }
+/* Giriş/Kayıt kapsayıcı */
+.auth-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Sekme butonları */
+.tab-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 0.5rem;
+  cursor: pointer;
+  background: #eee;
+  border: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.tab-btn.active {
+  background: #ddd;
+}
+
+/* Sekme içerikleri */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Form elemanları */
+form label {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+  </style>
+</head>
+  <body>
+
+</div>
+
+  
+<!-- JS dosyasını bağlama -->
+<script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+<br>
+<br><br>
+<br><br>
+<br ><br>
+<br>
+<header>
+  
+    <h1>Bilim Herkes İçin!</h1>
+    <br>
+    <p>Türk işaret diliyle desteklenen fen eğitimi platformuna hoş geldiniz.</p>
+  </header>
+  <br>
+  <main>
+  <section class="class-buttons">
+    <a href="/sinif/3">3. Sınıf <span class="icon">🌱</span></a>
+<a href="/sinif/4">4. Sınıf <span class="icon">🔍</span></a>
+<a href="/sinif/5">5. Sınıf <span class="icon">⚡</span></a>
+<a href="/sinif/6">6. Sınıf <span class="icon">🧬</span></a>
+<a href="/sinif/7">7. Sınıf <span class="icon">🌌</span></a>
+<a href="/sinif/8">8. Sınıf <span class="icon">📊</span></a>
+  </section>
+<section class="class-buttons">
+  <a href="/sinif/5">5. Sınıf <span class="icon">⚡</span></a>
+  </section>
+<br> 
+  <section class="quick-access">
+    <a href="/sesli-anlatim" class="qa-card">
+  <span class="icon">🔊</span>
+  <h4>Sesli Anlatım</h4>
+  <p>Dersleri dinleyerek öğren</p>
+</a>
+<a href="/quiztest" class="qa-card">
+  <span class="icon">📝</span>
+  <h4>Quiz / Test</h4>
+  <p>Kendini hemen dene</p>
+</a>
+<a href="/pdf-indir" class="qa-card">
+  <span class="icon">📄</span>
+  <h4>PDF / Materyal</h4>
+  <p>Ders notlarını indir</p>
+</a>
+  </section>
+  <style>
+    .qa-card:hover h4,
+    .qa-card:hover p {
+      color: #fff !important;
+    }
+  </style>
+  <section class="quick-access">
+    <a class="qa-card" href="/sss">
+  <div class="icon">❓</div>
+  Sıkça Sorulan Sorular
+</a>
+<a class="qa-card" href="/tidvideo">
+  <div class="icon">🎥</div>
+  İşaret Dili Videoları
+</a>
+<a class="qa-card" href="/deneyler">
+  <div class="icon">🧪</div>
+  Fen Deneyleri
+</a>
+<a class="qa-card" href="/oyunlar">
+  <div class="icon">🎮</div>
+  Etkileşimli Oyunlar
+</a>
+  </section>
+</main>
+<br>
+
+ <div class="ai-container">
+    <button id="aiTrigger">🤖 YZ</button>
+
+    <div id="aiPanel" class="hidden">
+      <textarea id="userQuestion" placeholder="Sorunuzu yazın..." rows="4"></textarea>
+      <button id="sendQuestion">Soruyu Gönder</button>
+      <div id="aiAnswer"></div>
+    </div>
+  </div>
+
+  <script>
+    const triggerBtn = document.getElementById("aiTrigger");
+    const panel = document.getElementById("aiPanel");
+    const sendBtn = document.getElementById("sendQuestion");
+    const questionInput = document.getElementById("userQuestion");
+    const answerBox = document.getElementById("aiAnswer");
+
+    // Paneli aç/kapat
+    triggerBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      panel.classList.toggle("hidden");
+    });
+
+    // Dışarıya tıklanınca paneli kapat
+    document.addEventListener("click", (e) => {
+      const isClickInside = panel.contains(e.target) || triggerBtn.contains(e.target);
+      if (!isClickInside) {
+        panel.classList.add("hidden");
+      }
+    });
+
+    // Soruyu gönder
+    sendBtn.addEventListener("click", async () => {
+const userText = document.getElementById("userQuestion").value.trim();
+      if (!userText) return;
+
+      answerBox.innerText = "Yanıt alınıyor...";
+
+       try {
+   const response = await fetch('/ask', {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ prompt: userText })
+        });
+
+        const data = await response.json();
+         console.log("Gemini yanıtı:", data);
+        const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Yanıt alınamadı.';
+        answerBox.innerText = data.reply; 
+      } catch (err) {
+        answerBox.innerText = "Hata oluştu: " + err.message;
+      }
+    });
+  </script>
+
+<br>
+<br>
+<nav>
+  <div class="logo-container">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="FenErişim Logo" class="logo">
+    <span class="logo-text">FenErişim</span>
+  </div>
+
+  <div class="search-container">
+    <input type="text" placeholder="Ara..." class="search-input">
+    <button type="submit" class="search-button">🔍</button>
+  </div> 
+
+  <div class="menu-toggle">☰</div>
+
+  <ul>
+    <li><a href="/">Ana Sayfa</a></li>
+    <li><a href="/hakkinda">Hakkımızda</a></li>
+    <li><a href="/iletisim">İletişim</a></li>
+    <li><a href="/blog-haberler">Blog/Haberler</a></li>
+    <li><a href="#auth-section" data-tab="login">Giriş Yap /</a></li>
+    <li><a href="#auth-section" data-tab="register">Kayıt Ol</a></li>
+  </ul>
+</nav>
+
+
+
+<div id="auth-section" class="auth-container" style="display: none;">
+  <div class="tab-buttons">
+    <button class="tab-btn active" data-tab="login">Giriş Yap</button>
+    <button class="tab-btn" data-tab="register">Kayıt Ol</button>
+  </div>
+
+  <div id="login" class="tab-content active">
+    <h2>Giriş Yap</h2>
+    <form method="post" action="/login">
+      <label for="login-email">E-posta:</label>
+      <input type="email" id="login-email" name="email" required />
+      <label for="login-password">Şifre:</label>
+      <input type="password" id="login-password" name="password" required />
+      <button type="submit">Giriş Yap</button>
+    </form>
+  </div>
+
+  <div id="register" class="tab-content">
+    <h2>Kayıt Ol</h2>
+    <form method="post" action="/register">
+      <label for="name">Ad Soyad:</label>
+      <input type="text" id="name" name="name" required />
+      <label for="register-email">E-posta:</label>
+      <input type="email" id="register-email" name="email" required />
+      <label for="register-password">Şifre:</label>
+      <input type="password" id="register-password" name="password" required />
+      <label for="role">Kullanıcı Türü:</label>
+      <select id="role" name="role">
+        <option value="öğrenci">Öğrenci</option>
+        <option value="öğretmen">Öğretmen</option>
+        <option value="veli">Veli</option>
+      </select>
+      <button type="submit">Kayıt Ol</button>
+    </form>
+  </div>
+</div>
+
+<!--JS GİRİŞ YAP KAYIT OL-->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Tüm giriş/kayıt bağlantılarını dinle
+    document.querySelectorAll('a[href="#auth-section"]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const tab = this.dataset.tab;
+        document.getElementById('auth-section').style.display = 'block';
+        activateTab(tab);
+        window.scrollTo({ top: document.getElementById('auth-section').offsetTop, behavior: 'smooth' });
+      });
+    });
+
+    // Sekme geçiş fonksiyonu
+    function activateTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.tab === tabId);
+      });
+
+      document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.toggle('active', content.id === tabId);
+      });
+    }
+
+    // Sekme butonlarına tıklama
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        activateTab(btn.dataset.tab);
+      });
+    });
+  });
+</script>
+  <footer>
+    <p style="font-size: 14px; margin-top: 20px; color: #ffffff;">© 2025 FenErişim | Erişilebilir Bilim Eğitimi</p>
+ <br>
+  </footer>
+</body>
+</html>

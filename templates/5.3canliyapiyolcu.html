@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Canlıların Yapısına Yolculuk – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/5sinifkonu.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Canlıların Yapısına Yolculuk – İşaret Dili Video Kütüphanesi</h1>
+      <p>5. Sınıf Fen Bilimleri | Hücre yapısı, organizasyon basamakları ve destek-hareket sistemi işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+  
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Hücre ve Organelleri</a>
+        <a href="#" class="chip">Bitki ve Hayvan Hücresi Benzerlik ve Farklılıklar</a>
+        <a href="#" class="chip">Sürtünme Kuvveti</a>
+        <a href="#" class="chip">Hücre-Doku-Organ-Sistem-Organizma İlişkisi</a>
+        <a href="#" class="chip">Destek ve Hareket Sistemi</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+  <main class="container">
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb"><span class="badge">Hücre ve Organelleri</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Hücre Yapısı ve Organeller</h3>
+          <p class="card-meta">İşaret diliyle hücre tanıtımı • 6 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Mikroskopla hücre gözlemi ve organel tanımlama</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Bitki ve Hayvan Hücresi</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Benzerlik ve Farklılıklar</h3>
+          <p class="card-meta">İşaret diliyle karşılaştırma • 5 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Hücre modeli ile yapı karşılaştırması</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Hücre-Doku-Organ-Sistem-Organizma İlişkisi</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Hücreden Organizmaya</h3>
+          <p class="card-meta">İşaret diliyle yapı ilişkisi • 6 dk</p>
+          <a class="btn" href="#video-3">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Hücre → Doku → Organ → Sistem şeması oluşturma</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Destek ve Hareket Sistemi</span></div>
+        <div class="card-body">
+          <h3 class="card-title">İskelet ve Kaslar</h3>
+          <p class="card-meta">İşaret diliyle sistem tanıtımı • 5 dk</p>
+          <a class="btn" href="#video-4">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Eklem modeli ile hareket gözlemi</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal 1 -->
+  <div id="video-1" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Hücre Yapısı ve Organeller</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">Altyazı var</p><p class="pill">İşaret dili</p></div>
+      <p class="desc">Hücrenin temel yapısı, çekirdek, sitoplazma ve organellerin görevleri işaret diliyle anlatılır.</p>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="video-2" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Bitki ve Hayvan Hücresi</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">Altyazı var</p><p class="pill">İşaret dili</p></div>
+      <p class="desc">Bitki ve hayvan hücrelerinin ortak yapıları ve farklı organelleri karşılaştırmalı olarak sunulur.</p>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div id="video-3" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Hücre-Doku-Organ-Sistem-Organizma İlişkisi</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">Altyazı var</p><p class="pill">İşaret dili</p></div>
+      <p class="desc">Canlıların yapısal organizasyonu adım adım açıklanır: hücreden organizmaya giden yol işaret diliyle sunulur.</p>
+    </div>
+  </div>
+
+  <!-- Modal 4 -->
+  <div id="video-4" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Destek ve Hareket Sistemi</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_4" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">Altyazı var</p><p class="pill">İşaret dili</p></div>
+      <p class="desc">İskeletin görevleri, kasların yapısı ve eklemlerin hareketi görsel modellemelerle anlatılır.</p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolarda altyazı ve kısa özet eklenmiştir. Tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+</body>
+</html>

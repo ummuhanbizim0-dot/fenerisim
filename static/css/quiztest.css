@@ -1,0 +1,121 @@
+*:root{
+  --bg: #f5f5f0;      /* krem */
+  --card: #ffffff;    /* beyaz kart */
+  --text: #333333;    /* koyu metin */
+  --muted: #8f4f00;   /* ikincil metin */
+  --line: #e5e5e0;    /* ayrım çizgisi */
+  --header: #9e5700;  /* koyu gri/siyah */
+  --accent: #a93c05;  /* buton koyu gri */
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin:0; padding:0;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.quiz-header{
+  background: var(--header);
+  color:#fff;
+  text-align:center;
+  padding:24px 16px;
+}
+
+.grade-nav{
+  display:flex; flex-wrap:wrap; justify-content:center; gap:10px;
+  padding:14px 18px; border-bottom:1px solid var(--line);
+}
+.grade-nav a{
+  color: var(--text); text-decoration:none; background:#fff;
+  border:1px solid var(--line); padding:8px 12px; border-radius:8px;
+}
+.grade-nav a:hover{ background:#f0f0eb; }
+
+.quiz-wrapper{
+  display:flex; flex-wrap:wrap; gap:80px; justify-content:center;
+  padding:20px;
+}
+
+.quiz-section{
+  width: min(720px, 100%);
+  background: var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.quiz-section h2{
+  font-size:20px; margin:0 0 8px 0; color:#222;
+}
+.quiz-section h3{
+  margin:16px 0 8px 0; font-size:16px; color:var(--muted);
+  border-top:1px solid var(--line); padding-top:8px;
+}
+
+.quiz-form{ margin-top:8px; }
+
+.question{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:10px 12px;
+  margin:10px 0;
+}
+.question p{ margin:0 0 8px 0; font-weight:600; }
+.question label{
+  display:inline-block; margin:4px 10px 4px 0; cursor:pointer; color:#444;
+}
+.question input[type="radio"]{ margin-right:6px; }
+
+.submit-btn{
+  margin-top:10px;
+  background: var(--accent);
+  color:#fff; border:none; border-radius:10px;
+  padding:10px 16px; font-weight:700; cursor:pointer;
+}
+.submit-btn:hover{ filter: brightness(1.1); }
+
+
+/* Mobil uyum */
+@media (max-width: 768px){
+  .quiz-section{ padding:16px; }
+  .question{ padding:10px; }
+}
+#scrollTopBtn, #scrollBottomBtn {
+  position: fixed;
+  right: 30px;
+  z-index: 999;
+  background: linear-gradient(135deg, #e31111, #dd8f12);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+#scrollTopBtn {
+  bottom: 90px;
+}
+
+#scrollBottomBtn {
+  bottom: 30px;
+}
+
+#scrollTopBtn:hover,
+#scrollBottomBtn:hover {
+  background: linear-gradient(135deg, #ebd020, #ff2600);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.quiz-footer{
+  text-align:center; color:#fff; background:var(--header);
+  padding:12px; margin-top:10px;
+}

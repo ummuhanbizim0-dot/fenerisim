@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sağlıklı Besleniyorum – İşaret Dili Video Kütüphanesi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/4sinifkonu.css') }}">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Sağlıklı Besleniyorum – İşaret Dili Video Kütüphanesi</h1>
+      <p>4. Sınıf Fen Bilimleri | Besin içerikleri, vitaminler ve dengeli beslenme işaret diliyle anlatılıyor.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Filtreler ve arama">
+      <div class="filters">
+        <a href="#" class="chip chip-active">Tümü</a>
+        <a href="#" class="chip">Besin İçerikleri</a>
+        <a href="#" class="chip">Vitamin ve Mineraller</a>
+        <a href="#" class="chip">Dengeli Beslenme</a>
+      </div>
+      <form class="search" role="search" aria-label="Video ara" onsubmit="return false;">
+        <input type="search" placeholder="Videolarda ara..." aria-label="Ara">
+      </form>
+    </section>
+
+    <section class="grid" aria-label="Video listesi">
+      <article class="card">
+        <div class="thumb"><span class="badge">Besin İçerikleri</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Besinlerde Neler Var?</h3>
+          <p class="card-meta">İşaret diliyle protein, karbonhidrat, yağ • 5 dk</p>
+          <a class="btn" href="#video-1">Videoyu Aç</a>
+          <p class="experiment">🧪 Deney: Besin içeriklerini ayırt etme – yumurta, ekmek, zeytin</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Vitamin ve Mineraller</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Vücudumuzun İhtiyacı Olanlar</h3>
+          <p class="card-meta">İşaret diliyle vitamin türleri • 6 dk</p>
+          <a class="btn" href="#video-2">Videoyu Aç</a>
+          <p class="experiment">🧪 Poster: Hangi besinde hangi vitamin var?</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb"><span class="badge">Dengeli Beslenme</span></div>
+        <div class="card-body">
+          <h3 class="card-title">Sağlıklı Tabağım</h3>
+          <p class="card-meta">İşaret diliyle besin grupları • 5 dk</p>
+          <a class="btn" href="#video-3">Videoyu Aç</a>
+          <p class="experiment">🧪 Uygulama: Günlük öğün planı hazırlama</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal örnekleri -->
+  <div id="video-1" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Besinlerde Neler Var?</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Besinlerdeki temel içerikler (protein, karbonhidrat, yağ) örneklerle tanıtılır.</p>
+    </div>
+  </div>
+
+  <div id="video-2" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Vücudumuzun İhtiyacı Olanlar</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Vitamin ve minerallerin vücuttaki görevleri ve hangi besinlerde bulunduğu anlatılır.</p>
+    </div>
+  </div>
+
+  <div id="video-3" class="modal">
+    <div class="modal-dialog">
+      <a href="#" class="modal-close">×</a>
+      <h2 class="modal-title">Sağlıklı Tabağım</h2>
+      <div class="player">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" allowfullscreen></iframe>
+      </div>
+      <div class="meta"><p class="pill">İşaret dili</p><p class="pill">Altyazı var</p></div>
+      <p class="desc">Dengeli beslenme için besin grupları ve öğün planlaması örneklerle anlatılır.</p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>ⓘ Videolarda arya ve kısa özet eklenmiştir, tüm içerikler eğitim amaçlıdır.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>İşaret Dili Konu Anlatım Video Kütüphanesi</title>
+  <!-- <link rel="stylesheet" href="/static/css/tidvideo.css"> -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tidvideo.css') }}">
+
+</head>
+<body>
+  <h1>İşaret Dili Konu Anlatım Video Kütüphanesi</h1>
+  <!-- Sayfa içeriği (sınıflar) -->
+<div class="grade-row" id="gradeRow">
+  <!-- ... sınıf sütunları burada ... -->
+</div>
+ <!-- En sola gidince görünen kutucuk --> <div class="scroll-button left" onclick="scrollToStart()">  ->  7. ve 8. Sınıfa Git</div>  
+<!-- En sağda görünen kutucuk -->
+<div class="scroll-button right" onclick="scrollToStart()">  <- 3. Sınıfa Git</div>   
+
+
+
+  <div class="grade-row">
+    <!-- Her sınıf için bir sütun -->
+    <!-- 3. Sınıf -->
+    <div class="grade-column">
+      <h2>3. Sınıf</h2>
+      <div class="video-grid">
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/3_1.mp4"><track src="captions/3_1.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Maddenin Halleri</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/3_2.mp4"><track src="captions/3_2.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Isı ve Sıcaklık</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/3_3.mp4"><track src="captions/3_3.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Canlılar ve Hayat</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/3_4.mp4"><track src="captions/3_4.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Duyu Organlarımız</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/3_5.mp4"><track src="captions/3_5.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Geri Dönüşüm</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/3_6.mp4"><track src="captions/3_6.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Çevre Bilinci</p></div>
+      </div>
+    </div>
+
+    <!-- 4. Sınıf -->
+    <div class="grade-column">
+      <h2>4. Sınıf</h2>
+      <div class="video-grid">
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/4_1.mp4"><track src="captions/4_1.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Sesin Yayılması</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/4_2.mp4"><track src="captions/4_2.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Işığın Yansıması</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/4_3.mp4"><track src="captions/4_3.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Elektrik Devreleri</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/4_4.mp4"><track src="captions/4_4.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Maddeyi Tanıyalım</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/4_5.mp4"><track src="captions/4_5.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Doğa Olayları</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/4_6.mp4"><track src="captions/4_6.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Canlıların Sınıflandırılması</p></div>
+      </div>
+    </div>
+
+    <!-- 5. Sınıf -->
+    <div class="grade-column">
+      <h2>5. Sınıf</h2>
+      <div class="video-grid">
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/5_1.mp4"><track src="captions/5_1.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Güneş Sistemi</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/5_2.mp4"><track src="captions/5_2.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Kuvvet ve Hareket</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/5_3.mp4"><track src="captions/5_3.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Maddenin Değişimi</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/5_4.mp4"><track src="captions/5_4.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Sindirim Sistemi</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/5_5.mp4"><track src="captions/5_5.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Besin Zinciri</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/5_6.mp4"><track src="captions/5_6.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Çevre Sorunları</p></div>
+      </div>
+    </div>
+
+    <!-- 6. Sınıf -->
+     <div class="grade-column">
+      <h2>6. Sınıf</h2>
+      <div class="video-grid">
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/6_2.mp4"><track src="captions/6_2.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Destek ve Hareket Sistemi</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/6_3.mp4"><track src="captions/6_3.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Elektrik Devreleri</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/6_4.mp4"><track src="captions/6_4.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Madde ve Isı</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/6_5.mp4"><track src="captions/6_5.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Güneş ve Dünya</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/6_6.mp4"><track src="captions/6_6.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Doğal Afetler</p></div>
+      </div>
+    </div>
+
+   
+        <div class="grade-column">
+      <h2>7. Sınıf</h2>
+      <div class="video-grid">
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/7_1.mp4"><track src="captions/7_1.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Kuvvet ve Enerji</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/7_2.mp4"><track src="captions/7_2.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Basınç</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/7_3.mp4"><track src="captions/7_3.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Sindirim Sistemi</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/7_4.mp4"><track src="captions/7_4.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Solunum Sistemi</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/7_5.mp4"><track src="captions/7_5.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Elektrik Enerjisi</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/7_6.mp4"><track src="captions/7_6.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Işık ve Görme</p></div>
+      </div>
+    </div>
+     <!-- 8. Sınıf-->
+          <div class="grade-column">
+      <h2>8. Sınıf</h2>
+      <div class="video-grid">
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/8_1.mp4"><track src="captions/8_1.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">DNA ve Genetik</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/8_2.mp4"><track src="captions/8_2.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Basit Makineler</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/8_3.mp4"><track src="captions/8_3.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Kimyasal Tepkimeler</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/8_4.mp4"><track src="captions/8_4.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Madde ve Endüstri</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/8_5.mp4"><track src="captions/8_5.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Enerji Dönüşümleri</p></div>
+        <div class="video-box"><img src="icons/sign-language.png" class="icon"><video controls onclick="openModal(this)" src="videos/8_6.mp4"><track src="captions/8_6.vtt" kind="subtitles" srclang="tr" label="Türkçe"></video><p class="caption">Bilim Uygulamaları</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal pencere -->
+  <div id="videoModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <video id="modalVideo" controls></video>
+  </div>
+
+  <script>
+    function openModal(videoElement) {
+      const modal = document.getElementById("videoModal");
+      const modalVideo = document.getElementById("modalVideo");
+      modalVideo.src = videoElement.src;
+      modal.style.display = "flex";
+    }
+
+    function closeModal() {
+      const modal = document.getElementById("videoModal");
+      const modalVideo = document.getElementById("modalVideo");
+      modalVideo.pause();
+      modalVideo.src = "";
+      modal.style.display = "none";
+    }
+    
+  const gradeRow = document.getElementById("gradeRow");
+  const leftBtn = document.querySelector(".scroll-button.left");
+  const rightBtn = document.querySelector(".scroll-button.right");
+
+  function scrollToStart() {
+    gradeRow.scrollTo({ left: 0, behavior: "smooth" });
+  }
+</script>
+<script>
+  // Görünürlük kontrolü
+  gradeRow.addEventListener("scroll", () => {
+    const scrollLeft = gradeRow.scrollLeft;
+    const maxScroll = gradeRow.scrollWidth - gradeRow.clientWidth;
+
+    if (scrollLeft < 50) {
+      // En başta: sadece sağdan gelen kutucuk görünür
+      leftBtn.style.display = "none";
+      rightBtn.style.display = "block";
+    } else {
+      // Ortadaysa veya sağdaysa: sadece soldaki kutucuk görünür
+      leftBtn.style.display = "block";
+      rightBtn.style.display = "none";
+    }
+  });
+
+  // Sayfa yüklendiğinde kontrol et
+  window.addEventListener("load", () => {
+    gradeRow.dispatchEvent(new Event("scroll"));
+  });
+</script>
+</body>
+</html>
